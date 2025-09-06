@@ -83,8 +83,31 @@
                         I am Yash Bhoi, a professional web and app developer. My skills include proficiency in HTML, CSS, JavaScript, and frameworks like React and AngularJS. I also have experience in back-end technologies, database management and server-side programming. I have been freelancing since 2020 and honed my skills in graphic design and web development. My background in graphic design allows me to approach web development with an eye for design and user experience. 
                         <br>I am passionate about delivering innovative solutions and am the founder of YsquareTech, an IT startup that provides a wide range of IT services. I am committed to staying current with the latest technologies and advancements in web development to deliver the best results for my clients.              
                     </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4" onclick="window.location.href = 'https://drive.google.com/file/d/1FsAFmF8_mrM8E7sZEu092VKzOv2O4enn/view?usp=sharing';">Download CV</button>
-                </div>              
+<!-- Resume Download Button -->
+<button class="btn-rounded btn btn-outline-primary mt-4" onclick="showResumeOptions()">Download CV</button>
+
+<!-- Hidden Resume Options -->
+<div id="resumeOptions" style="margin-top:10px; display:none;">
+  <button class="btn btn-success m-2" onclick="downloadResume('letter')">📄 Letter Size</button>
+  <button class="btn btn-info m-2" onclick="downloadResume('a4')">📄 A4 Size</button>
+</div>
+
+<script>
+  function showResumeOptions() {
+    document.getElementById("resumeOptions").style.display = "block";
+  }
+
+  function downloadResume(size) {
+    let links = {
+      "letter": "https://drive.google.com/file/d/1FsAFmF8_mrM8E7sZEu092VKzOv2O4enn/view?usp=drive_link",
+      "a4": "https://drive.google.com/file/d/1w5tUXqHXRI6--tpo_5-Xm9QHj5XKVoxZ/view?usp=drive_link"
+    };
+    window.location.href = links[size];
+  }
+</script>
+
+				
+				</div>              
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
     </section> <!-- end of about section -->

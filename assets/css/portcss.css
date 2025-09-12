@@ -12009,22 +12009,22 @@ pre .code {
 }
 
 .footer .social-links {
-  margin-left: auto;
+  margin-left: 330px;
 }
 
 .footer .social-links a {
   padding: 0;
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 36px;
   border-radius: 50%;
-  line-height: 40px;
+  line-height: 34px;
   text-align: center;
   border: 2px solid #6c757d;
   color: #6c757d;
 }
 
 .footer .social-links a:hover {
-  background: #695aa6;
+  background: #000000;
   border-color: #695aa6;
   color: #fff;
   text-decoration: none;
@@ -12231,3 +12231,4 @@ pre .code {
 .section-lg {
   padding: 100px 0 !important;
 }
+

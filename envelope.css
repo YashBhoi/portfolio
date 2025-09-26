@@ -69,9 +69,9 @@ body {
 
   .envelope__letter:before {
     content: "";
-    height: 0;
+   height: 0;
     width: 6px;
-    right: -34px;
+    right: -36px;
     bottom: -17px;
     position: absolute;
     border-top: 56px solid transparent;

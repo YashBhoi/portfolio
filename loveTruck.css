@@ -204,7 +204,7 @@ body
   position:absolute;
   width: 15px;
   height: 100px;
-  background: rgb(255, 92, 119);
+  background: rgb(255 92 119 / 50%);
   transform: perspective(8px) rotateX(7deg);
 	rotate: 270deg;
   margin: 50px;

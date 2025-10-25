@@ -554,46 +554,93 @@
 
   <!-- footer -->
 <div class="container">
-  <footer class="footer" style="width: 100%; padding: 15px 10px; box-sizing: border-box;">
+  <footer class="footer" 
+    style="
+      width: 100%; 
+      padding: 15px 10px; 
+      box-sizing: border-box;
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+      align-items: center; 
+      text-align: center;
+    ">
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; text-align: center;">
+    <!-- Copyright -->
+    <p id="copyText" style="
+      margin: 0; 
+      font-size: 14px; 
+      color: #7F7E7E; 
+      flex: 1 1 auto; 
+      text-align: left;
+    ">
+      Copyright <script>document.write(new Date().getFullYear())</script> &copy;
+      <a href="http://www.ysquaretech.com" style="color: #7F7E7E; text-decoration: none;">
+        Yash Bhoi YsquareTech
+      </a>
+    </p>
 
-      <!-- Copyright -->
-      <p style="margin: 0; font-size: 14px; color: #7F7E7E; flex: 1 1 auto; text-align: left; order: 1; width: 100%;">
-        Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-        <a href="http://www.ysquaretech.com" style="color: #7F7E7E; text-decoration: none;">Yash Bhoi YsquareTech</a>
-      </p>
-
-      <!-- Social Links -->
-      <div style="display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 15px; flex: 1 1 auto; order: 2; width: 100%; margin-top: 10px;">
-        <a href="mailto:yashbhoi013@gmail.com" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/yash-bhoi-dev/" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/0yashh___" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://in.pinterest.com/yashbhoi013/" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
-          <i class="fab fa-pinterest"></i>
-        </a>
-        <a href="https://www.instagram.com/0yashh___/" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://github.com/yash0013/" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.kaggle.com/yash1324" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
-          <i class="fab fa-kaggle"></i>
-        </a>
-      </div>
-
+    <!-- Social Links -->
+    <div id="socialLinks" style="
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: flex-end; 
+      align-items: center; 
+      gap: 15px; 
+      flex: 1 1 auto;
+    ">
+      <a href="mailto:yashbhoi013@gmail.com" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yash-bhoi-dev/" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/0yashh___" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://in.pinterest.com/yashbhoi013/" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
+        <i class="fab fa-pinterest"></i>
+      </a>
+      <a href="https://www.instagram.com/0yashh___/" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/yash0013/" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.kaggle.com/yash1324" target="_blank" style="color: #7F7E7E; font-size: 24px; text-decoration: none;">
+        <i class="fab fa-kaggle"></i>
+      </a>
     </div>
 
   </footer>
 </div>
-<!-- end of page footer -->
+
+<!-- Responsive inline script -->
+<script>
+function adjustFooterLayout() {
+  const isSmall = window.innerWidth < 768; // mobile width breakpoint
+  const footer = document.querySelector('.footer');
+  const copyText = document.getElementById('copyText');
+  const socialLinks = document.getElementById('socialLinks');
+
+  if (isSmall) {
+    footer.style.flexDirection = 'column';
+    footer.style.justifyContent = 'center';
+    copyText.style.textAlign = 'center';
+    socialLinks.style.justifyContent = 'center';
+    socialLinks.style.marginTop = '10px';
+  } else {
+    footer.style.flexDirection = 'row';
+    footer.style.justifyContent = 'space-between';
+    copyText.style.textAlign = 'left';
+    socialLinks.style.justifyContent = 'flex-end';
+    socialLinks.style.marginTop = '0';
+  }
+}
+
+window.addEventListener('resize', adjustFooterLayout);
+window.addEventListener('load', adjustFooterLayout);
+</script>
 
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>

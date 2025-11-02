@@ -582,6 +582,7 @@
       color: #7F7E7E; 
       flex: 1 1 auto; 
       text-align: left;
+      order: 1;
     ">
       Copyright <script>document.write(new Date().getFullYear())</script> &copy;
       <a href="mailto:yashbhoi013@gmail.com" style="color: #7F7E7E; text-decoration: none;">
@@ -597,6 +598,7 @@
       align-items: center; 
       gap: 15px; 
       flex: 1 1 auto;
+      order: 0;
     ">
       <a href="mailto:yashbhoi013@gmail.com" target="_blank" style="color: #7F7E7E; font-size: 20px; text-decoration: none;">
         <i class="fas fa-envelope"></i>
@@ -633,23 +635,36 @@ function adjustFooterLayout() {
   const socialLinks = document.getElementById('socialLinks');
 
   if (isSmall) {
+    // Stack vertically and put social icons first
     footer.style.flexDirection = 'column';
     footer.style.justifyContent = 'center';
     copyText.style.textAlign = 'center';
     socialLinks.style.justifyContent = 'center';
-    socialLinks.style.marginTop = '10px';
+    socialLinks.style.marginTop = '0';
+    copyText.style.marginTop = '10px';
+
+    // Change order
+    socialLinks.style.order = 0;
+    copyText.style.order = 1;
   } else {
+    // Default row layout
     footer.style.flexDirection = 'row';
     footer.style.justifyContent = 'space-between';
     copyText.style.textAlign = 'left';
     socialLinks.style.justifyContent = 'flex-end';
+    copyText.style.marginTop = '0';
     socialLinks.style.marginTop = '0';
+
+    // Reset order
+    socialLinks.style.order = 1;
+    copyText.style.order = 0;
   }
 }
 
 window.addEventListener('resize', adjustFooterLayout);
 window.addEventListener('load', adjustFooterLayout);
 </script>
+
 
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>

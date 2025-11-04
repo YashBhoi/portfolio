@@ -3,20 +3,30 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Explore the creative work of Yash Bhoi.">
+    <meta name="description" content="I'm Yash Bhoi. A web & App designer and developer. Here you can explore the creative work that I've done over the years.">
+    <meta name="keywords" content="Yash Bhoi, web design, graphic design, freelance, responsive design, mobile design, web development, higher education, instructional design, media communication, technology, digital design, creative portfolio, affordable design, resume design, presentation design, accessibility, inclusive design">
     <meta name="author" content="Yash Bhoi">
-    <title>Yash Bhoi </title>
+    <title>Yash Bhoi - Web & App Developer</title>
 
 
-    <!-- ✅ SEO + Branding -->
+    <!-- SEO + Branding -->
   <meta name="theme-color" content="#000000">
   <meta property="og:title" content="Yash Bhoi">
-  <meta property="og:description" content="Explore the creative work of Yash Bhoi.">
+  <meta property="og:description" content="I'm Yash Bhoi. A web & App designer and developer. Here you can explore the creative work that I've done over the years.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://yashbhoi.tech/assets/favicon/favicon.svg">
   <meta property="og:url" content="https://yashbhoi.tech/">
 
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://yashbhoi.tech/">
+<meta property="twitter:title" content="Yash Bhoi">
+<meta property="twitter:description" content="I'm Yash Bhoi. A web & App designer and developer. Here you can explore the creative work that I've done over the years.">
+<meta property="twitter:image" content="https://yashbhoi.tech/assets/favicon/favicon.svg">
 
+
+
+    <!-- Favicon -->
 
     <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
@@ -319,13 +329,164 @@ window.onclick = function(event) {
     <section class="section" id="skills">
         <div class="container text-center">
             <p class="section-subtitle">What I Do ?</p>
-            <h6 class="section-title mb-6">Service</h6>
-            
+            <h6 class="section-title mb-6">Skills</h6>
+     
+         <div id="users" class="about-text-wrapper" 
+  style="max-width:900px;position:relative;margin:auto;text-align:center;">
 
+  <!-- Overlapping Circles -->
+  <div id="venn-diagram" class="about-flex venn-flex smaller-venn-flex" 
+    style="position:relative;display:flex;justify-content:center;align-items:center;margin-bottom:120px;">
 
+    <!-- Skill Circle -->
+    <div id="skill" class="venn outer sort" data-list="skill-list" 
+      style="width:300px;height:300px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:relative;z-index:2;transform:translateX(40px);">
+     
+      <svg viewBox="0 0 400 400" style="transform:rotate(266deg);width:500px;height:400px; margin-right: 43px;">
+    <defs>
+      <path id="line1" d="M 0,200 A 200,200 0 0 1 400,300" />
+      <path id="line2" d="M 0,300 A 200.75,200 0 0 1 400,300" />
+    </defs>
+    <text style="text-anchor:middle;fill:#d7bfff;font-size:50px;font-weight:600; padding-top:200px;">
+      <textPath startOffset="70%" xlink:href="#line1">What I’m best at</textPath>
+    </text>
+  </svg>
+    </div>
 
-        </div>
+    <!-- Like Circle -->
+    <div id="like" class="venn outer sort" data-list="like-list" 
+      style="width:300px;height:300px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:relative;z-index:1;transform:translateX(-40px);">
+      
+      <svg viewBox="0 0 400 400" style="transform:rotate(27deg);width:500px;height:400px; margin-right: 43px;">
+    <defs>
+      <path id="line1" d="M 0,200 A 200,200 0 0 1 400,300" />
+    </defs>
+    <text style="text-anchor:middle;fill:#d7bfff;font-size:50px;font-weight:600; padding-top:200px;" dy="-40px">
+      <textPath startOffset="50%" xlink:href="#line1">What I enjoy the most</textPath>
+    </text>
+  </svg>
+    </div>
 
+    <!-- Paid Circle (bottom, centered, overlapping both) -->
+    <div id="paid" class="venn outer sort" data-list="paid-list" 
+      style="width:300px;height:300px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:absolute;bottom:-194px;left:50%;transform:translateX(-50%);z-index:3;">
+
+       <svg viewBox="0 0 400 400" style="transform:rotate(347deg);width:485px;height:391px; margin-right: 13px;">
+    <defs>
+      <path id="line1" d="M 0,100 A 200,200 0 0 1 400,300" />
+    </defs>
+    <text style="text-anchor:middle;fill:#d7bfff;font-size:50px;font-weight:600; padding-top:200px;">
+      <textPath startOffset="50%" xlink:href="#line1">What I get paid for</textPath>
+    </text>
+  </svg>
+    </div>
+  </div>
+
+  <!-- Info Lists -->
+  <div class="downsize-flex" 
+    style="display:flex;justify-content:center;flex-wrap:wrap;gap:30px;position:relative;">
+    
+    <ul id="skill-list" class="list" 
+      style="list-style:none;padding:15px 25px;margin:0;display:none;background:rgba(255,255,255,0.05);border-radius:12px;min-width:200px;text-align:left;transition:all 0.4s ease;opacity:0;">
+      <li style="margin:8px 0;">Web Development</li>
+      <li style="margin:8px 0;">UI/UX Design</li>
+      <li style="margin:8px 0;">Problem Solving</li>
+    </ul>
+
+    <ul id="like-list" class="list" 
+      style="list-style:none;padding:15px 25px;margin:0;display:none;background:rgba(255,255,255,0.05);border-radius:12px;min-width:200px;text-align:left;transition:all 0.4s ease;opacity:0;">
+      <li style="margin:8px 0;">Designing interfaces</li>
+      <li style="margin:8px 0;">Creating animations</li>
+      <li style="margin:8px 0;">Learning new tech</li>
+    </ul>
+
+    <ul id="paid-list" class="list" 
+      style="list-style:none;padding:15px 25px;margin:0;display:none;background:rgba(255,255,255,0.05);border-radius:12px;min-width:200px;text-align:left;transition:all 0.4s ease;opacity:0;">
+      <li style="margin:8px 0;">Freelance projects</li>
+      <li style="margin:8px 0;">UI improvements</li>
+      <li style="margin:8px 0;">Website builds</li>
+    </ul>
+  </div>
+
+  <!-- Connector Line -->
+  <div id="connector" 
+    style="position:absolute;height:3px;background:linear-gradient(90deg,#a871ff,#d9b6ff);transform-origin:left center;top:0;left:0;display:none;border-radius:2px;transition:width 0.4s ease,transform 0.4s ease,top 0.4s ease,left 0.4s ease;">
+    <div id="arrow" 
+      style="position:absolute;right:-6px;top:50%;transform:translateY(-50%) rotate(45deg);width:10px;height:3px;background:#b666ff;border-radius:2px;"></div>
+    <div id="arrow2" 
+      style="position:absolute;right:-6px;top:50%;transform:translateY(-50%) rotate(-45deg);width:10px;height:3px;background:#b666ff;border-radius:2px;"></div>
+  </div>
+
+  <p style="margin-top:25px;font-size:14px;color:#a0a0a0;">Click circles to explore your sweet spot</p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const venns = document.querySelectorAll(".venn.sort");
+  const lists = document.querySelectorAll(".list");
+  const connector = document.getElementById("connector");
+
+  lists.forEach(l => l.style.display = "none");
+
+  venns.forEach(venn => {
+    venn.addEventListener("click", () => {
+      // Reset all
+      venns.forEach(v => {
+        v.style.background = "rgba(112,0,255,0.1)";
+        v.style.boxShadow = "none";
+        v.style.transform = v.id === "skill" ? "translateX(40px)" : 
+                            v.id === "like" ? "translateX(-40px)" :
+                            "translateX(-50%)";
+      });
+      lists.forEach(l => { l.style.display = "none"; l.style.opacity = "0"; });
+      connector.style.display = "none";
+      connector.style.width = "0px";
+
+      // Activate clicked circle
+      venn.style.background = "linear-gradient(135deg,#7d19ff,#b666ff)";
+      venn.style.boxShadow = "0 0 20px rgba(183,111,255,0.5)";
+      venn.style.transform += " scale(1.05)";
+
+      // Show its list
+      const listId = venn.getAttribute("data-list");
+      const listEl = document.getElementById(listId);
+      if (listEl) {
+        listEl.style.display = "block";
+        setTimeout(() => listEl.style.opacity = "1", 10);
+      }
+
+      // Connector line animation
+      const rect1 = venn.getBoundingClientRect();
+      const rect2 = listEl.getBoundingClientRect();
+      const parentRect = document.getElementById("users").getBoundingClientRect();
+
+      const x1 = rect1.left + rect1.width / 2 - parentRect.left;
+      const y1 = rect1.top + rect1.height / 2 - parentRect.top;
+      const x2 = rect2.left + rect2.width / 2 - parentRect.left;
+      const y2 = rect2.top - parentRect.top;
+
+      const dx = x2 - x1;
+      const dy = y2 - y1;
+      const length = Math.sqrt(dx * dx + dy * dy);
+      const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+      connector.style.display = "block";
+      connector.style.top = y1 + "px";
+      connector.style.left = x1 + "px";
+      connector.style.transform = "rotate(" + angle + "deg)";
+      connector.style.transition = "none";
+      connector.style.width = "0px";
+
+      setTimeout(() => {
+        connector.style.transition = "width 0.6s ease, transform 0.4s ease, top 0.4s ease, left 0.4s ease";
+        connector.style.width = length + "px";
+      }, 20);
+    });
+  });
+});
+</script>
+
+ </div>
     <!-- service section -->
     <section class="section" id="service">
         <div class="container text-center">

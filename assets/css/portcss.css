@@ -10683,6 +10683,7 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
+  
 }
 
 @media (min-width: 576px) {
@@ -11982,6 +11983,7 @@ pre .code {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+          
 }
 
 .footer p,
@@ -12185,7 +12187,8 @@ pre .code {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1;
+          flex-grow: 1; 
+  background: url(assets/imgs/pattern.png);
 }
 
 @media (max-width: 767.98px) {
@@ -12209,6 +12212,7 @@ pre .code {
 /* sections */
 .section {
   padding: 70px 10px;
+  
 }
 
 .section .section-title {
@@ -12233,3 +12237,55 @@ pre .code {
   padding: 100px 0 !important;
 }
 
+/* Fullscreen loader overlay */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #710dfb96;
+  backdrop-filter: blur(23px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Loader image with heartbeat animation */
+.loader img {
+  width: 120px;
+  opacity: 0.9;
+  border-radius: 50%;
+  animation: heartbeat 1.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+}
+
+/* Heartbeat (pulse) animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.15);
+  }
+  40%, 100% {
+    transform: scale(1);
+  }
+}
+
+/* Fade-out when page is ready */
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}

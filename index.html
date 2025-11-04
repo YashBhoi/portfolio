@@ -7,12 +7,12 @@
     <meta name="author" content="Yash">
     <title>Portfolio | Yash Bhoi </title>
 
-    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-<link rel="shortcut icon" href="favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+<link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="YashBhoi" />
-<link rel="manifest" href="favicon/site.webmanifest" />
+<link rel="manifest" href="assets/favicon/site.webmanifest" />
 
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
@@ -22,6 +22,11 @@
     <!-- Bootstrap + Meyawo main styles -->
 	<link rel="stylesheet" href="assets/css/portcss.css">
 </head>
+<div class="loader">
+  <img src="assets/imgs/loader.png" alt="Loading...">
+</div>
+
+
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page Navbar -->
@@ -80,23 +85,58 @@
     </header><!-- end of page header -->
 
     <!-- about section -->
-    <section class="section pt-0" id="about">
-        <!-- container -->
-        <div class="container text-center">
-            <!-- about wrapper -->
-            <div class="about">
-                <div class="about-img-holder">
-                    <img src="assets/imgs/drawing.png" class="about-img" alt="Yash Bhoi">
-                </div>
-                <div class="about-caption">
-                    <p class="section-subtitle">Who Am I ?</p>
-                    <h2 class="section-title mb-3">About Me</h2>
-                    <p>
-                        I am Yash Bhoi, a professional web and app developer. My skills include proficiency in HTML, CSS, JavaScript, and frameworks like React and AngularJS. I also have experience in back-end technologies, database management and server-side programming. I have been freelancing since 2020 and honed my skills in graphic design and web development. My background in graphic design allows me to approach web development with an eye for design and user experience. 
-                        <br>I am passionate about delivering innovative solutions and am the founder of YsquareTech, an IT startup that provides a wide range of IT services. I am committed to staying current with the latest technologies and advancements in web development to deliver the best results for my clients.              
-                    </p>
-<!-- Download Button -->
-<button class="btn btn-primary" onclick="openModal()">Download CV</button>
+<section class="section pt-0" id="about">
+  <!-- container -->
+  <div class="container text-center">
+    <!-- about wrapper -->
+    <div class="about" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
+      
+      <!-- image holder -->
+      <div class="about-img-holder">
+        
+        <!-- floating bubbles
+        <div class="bubble" style="--size:60px;  --x:-60px;  --y:30px;  --z:1; --delay:0s;  --opacity:0.25;"></div>
+        <div class="bubble" style="--size:100px; --x:180px;  --y:70px;  --z:1; --delay:1s;  --opacity:0.18;"></div>
+        <div class="bubble" style="--size:50px;  --x:90px;   --y:-40px; --z:3; --delay:2s;  --opacity:0.35;"></div>
+        <div class="bubble" style="--size:80px;  --x:-120px; --y:100px; --z:1; --delay:1.5s;--opacity:0.22;"></div>
+        <div class="bubble" style="--size:70px;  --x:250px;  --y:-20px; --z:2; --delay:0.8s;--opacity:0.3;"></div>
+        <div class="bubble" style="--size:90px;  --x:-90px;  --y:-70px; --z:1; --delay:2.5s;--opacity:0.2;"></div>
+        <div class="bubble" style="--size:110px; --x:150px;  --y:130px; --z:2; --delay:1.2s;--opacity:0.25;"></div>
+        <div class="bubble" style="--size:150px;  --x:160px;   --y:150px; --z:3; --delay:0.6s;--opacity:0.28;"></div>
+        <div class="bubble" style="--size:100px; --x:210px;  --y:-90px; --z:1; --delay:1.8s;--opacity:0.2;"></div>
+        <div class="bubble" style="--size:80px;  --x:-70px;  --y:160px; --z:2; --delay:1.4s;--opacity:0.26;"></div>
+        <div class="bubble" style="--size:180px;  --x:-70px;  --y:140px; --z:2; --delay:1.4s;--opacity:0.26;"></div>
+
+        <div class="bubble2" style="--size:40px; --x:239px;  --y:200px;  --z:1; --delay:1s;  --opacity:0.18;"></div>
+        <div class="bubble2" style="--size:50px;  --x:250px;   --y:-46px; --z:3; --delay:2s;  --opacity:0.35;"></div>
+        <div class="bubble2" style="--size:80px;  --x:-150px; --y:90px; --z:1; --delay:1.5s;--opacity:0.22;"></div>
+        <div class="bubble2" style="--size:70px;  --x:250px;  --y:-20px; --z:2; --delay:0.8s;--opacity:0.3;"></div>
+        <div class="bubble2" style="--size:90px;  --x:-90px;  --y:-70px; --z:1; --delay:2.5s;--opacity:0.2;"></div>
+        <div class="bubble2" style="--size:110px; --x:150px;  --y:130px; --z:2; --delay:1.2s;--opacity:0.25;"></div>
+        <div class="bubble2" style="--size:60px;  --x:200px;   --y:400px; --z:3; --delay:0.6s;--opacity:0.28;"></div>
+         -->
+
+        <!-- floating image -->
+        <img src="assets/imgs/drawing.png" 
+             class="about-img fly-img" 
+             alt="Yash Bhoi">
+      </div>
+
+      <!-- text content -->
+      <div class="about-caption" style="flex: 1 1 400px; text-align: left; background: url(assets/imgs/pattern.png); padding: 20px; border-radius: 12px;">
+        <p class="section-subtitle">Who Am I ?</p>
+        <h2 class="section-title mb-3">About Me</h2>
+        <p>
+          I am Yash Bhoi, a professional web and app developer. My skills include proficiency in HTML, CSS, JavaScript, and frameworks like React and AngularJS. I also have experience in back-end technologies, database management and server-side programming. I have been freelancing since 2020 and honed my skills in graphic design and web development. My background in graphic design allows me to approach web development with an eye for design and user experience. 
+          <br>I am passionate about delivering innovative solutions and am the founder of YsquareTech, an IT startup that provides a wide range of IT services. I am committed to staying current with the latest technologies and advancements in web development to deliver the best results for my clients.              
+        </p>
+
+        <!-- Download Button -->
+        <button class="btn btn-primary" onclick="openModal()">Download CV</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Popup Modal -->
 <div id="resumeModal" class="modal">
@@ -112,103 +152,142 @@
 </div>
 
 <style>
-  /* Modal background */
-  .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 999; 
-    left: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.6); 
-  }
+/* Image float animation
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  25%  { transform: translateY(-8px) rotate(-2deg); }
+  50%  { transform: translateY(0px) rotate(1deg); }
+  75%  { transform: translateY(6px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
 
-  /* Modal box */
-  .modal-content {
-    background: #fff;
-    margin: 10% auto; 
-    padding: 20px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    animation: fadeIn 0.3s ease-in-out;
-  }
+/* Bubble style 
+.bubble {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  left: var(--x);
+  top: var(--y);
+  background: #0000008d;
+  border-radius: 50%;
+  z-index: var(--z);
+  animation: bubbleFloat 7s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
 
-  /* Close button */
-  .close {
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-  }
+/* Bubble floating motion 
+@keyframes bubbleFloat {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(10px, -15px) scale(1.05); }
+  50%  { transform: translate(-5px, -25px) scale(0.95); }
+  75%  { transform: translate(8px, -10px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.bubble2 {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  left: var(--x);
+  top: var(--y);
+  background: #00000052;
+  border-radius: 50%;
+  z-index: var(--z);
+  animation: bubbleFloat2 7s ease-in-out infinite;
+}
 
-  /* Buttons */
-  .button-group {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-  }
+/* Bubble floating motion 
+@keyframes bubbleFloat2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(10px, -15px) scale(1.05); }
+  50%  { transform: translate(-5px, -25px) scale(0.95); }
+  75%  { transform: translate(8px, -10px) scale(1.02); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+ */
 
-  .btn {
-    padding: 12px 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-  }
+/* Modal and buttons (kept same) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.6); 
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto; 
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.btn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn.letter {
+  background-color: #007bff;
+  color: white;
+}
+.btn.letter:hover { background-color: #0056b3; }
+.btn.a4 {
+  background-color: #28a745;
+  color: white;
+}
+.btn.a4:hover { background-color: #1e7e34; }
 
-  .btn.letter {
-    background-color: #007bff;
-    color: white;
-  }
-  .btn.letter:hover {
-    background-color: #0056b3;
-  }
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
 
-  .btn.a4 {
-    background-color: #28a745;
-    color: white;
-  }
-  .btn.a4:hover {
-    background-color: #1e7e34;
-  }
-
-  /* Animation */
-  @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.9);}
-    to {opacity: 1; transform: scale(1);}
-  }
+/* Responsive: stack content on small screens */
+@media (max-width: 768px) {
+  .about { flex-direction: column; text-align: center; }
+  .about-caption { text-align: center; }
+}
 </style>
 
 <script>
-  function openModal() {
-    document.getElementById("resumeModal").style.display = "block";
-  }
-
-  function closeModal() {
-    document.getElementById("resumeModal").style.display = "none";
-  }
-
-  function downloadResume(size) {
-    let links = {
-      "letter": "https://drive.google.com/file/d/15g1lyhxzMYZG5GocAAYg3gWKHh-NyfU-/view?usp=drive_link",
-      "a4": "https://drive.google.com/file/d/1Er0uU_fwmdqKbN-8CgEqy0SV9P5VD3Mq/view?usp=drive_link"
-    };
-    window.location.href = links[size];
-    closeModal();
-  }
-
-  // Close modal if user clicks outside box
-  window.onclick = function(event) {
-    let modal = document.getElementById("resumeModal");
-    if (event.target === modal) {
-      closeModal();
-    }
-  }
+function openModal() {
+  document.getElementById("resumeModal").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("resumeModal").style.display = "none";
+}
+function downloadResume(size) {
+  let links = {
+    "letter": "https://drive.google.com/file/d/15g1lyhxzMYZG5GocAAYg3gWKHh-NyfU-/view?usp=drive_link",
+    "a4": "https://drive.google.com/file/d/1Er0uU_fwmdqKbN-8CgEqy0SV9P5VD3Mq/view?usp=drive_link"
+  };
+  window.location.href = links[size];
+  closeModal();
+}
+window.onclick = function(event) {
+  let modal = document.getElementById("resumeModal");
+  if (event.target === modal) closeModal();
+}
 </script>
 
 
@@ -248,7 +327,7 @@
                         <div class="body">
                             <img src="assets/imgs/ads.svg" alt="ysquaretech.com" class="icon">
                             <h6 class="title">Branding services</h6>
-                            <p class="subtitle"> logo design, brand strategy, visual identity, packaging <br>design, marketing collateral,<br> and website design.</p>
+                            <p class="subtitle"> logo design, brand strategy, visual identity, packaging design, marketing collateral,<br> and website design.</p>
                         </div>
                     </div>
                 </div>
@@ -487,6 +566,8 @@
     </section><!-- end of blog section --> 
 
     <!-- contact section -->
+     <div class="cont" id="cont">
+
 <section class="section" id="contact">
   <div class="container text-center">
     <p class="section-subtitle">How can you communicate?</p>
@@ -526,6 +607,7 @@
     <!-- end of contact form -->
   </div>
 </section>
+</div>
 <!-- end of contact section -->
 
 <!-- success popup -->
@@ -573,6 +655,7 @@
       justify-content: space-between; 
       align-items: center; 
       text-align: center;
+      
     ">
 
     <!-- Copyright -->
@@ -663,6 +746,15 @@ function adjustFooterLayout() {
 
 window.addEventListener('resize', adjustFooterLayout);
 window.addEventListener('load', adjustFooterLayout);
+
+
+ window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.querySelector(".loader").classList.add("hidden");
+    }, 1500); // 1.5 seconds
+  });
+
+
 </script>
 
 
@@ -677,4 +769,7 @@ window.addEventListener('load', adjustFooterLayout);
     <script src="assets/js/portjs.js"></script>
 
 </body>
+
+</style>
+
 </html>

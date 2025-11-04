@@ -355,7 +355,7 @@ window.onclick = function(event) {
 
     <!-- Like Circle -->
     <div id="like" class="venn outer sort" data-list="like-list" 
-      style="width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:relative;z-index:1;transform:translateX(-40px);">
+      style="width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:relative;z-index:1;transform:translateX(-40px); left: 5-%;">
       
       <svg viewBox="0 0 400 400" style="transform:rotate(27deg);width:100px;height:100px; margin-right: 43px;">
     <defs>
@@ -369,7 +369,7 @@ window.onclick = function(event) {
 
     <!-- Paid Circle (bottom, centered, overlapping both) -->
     <div id="paid" class="venn outer sort" data-list="paid-list" 
-      style="width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:absolute;bottom:-194px;left:50%;transform:translateX(-50%);z-index:3;">
+      style="width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:absolute;bottom:-50%;left:50%;transform:translateX(-50%);z-index:3;">
 
        <svg viewBox="0 0 400 400" style="transform:rotate(347deg);width:100px;height:100px; margin-right: 13px;">
     <defs>
@@ -417,9 +417,7 @@ window.onclick = function(event) {
       style="position:absolute;right:-6px;top:50%;transform:translateY(-50%) rotate(-45deg);width:10px;height:3px;background:#b666ff;border-radius:2px;"></div>
   </div>
 
-  <p style="margin-top:25px;font-size:14px;color:#a0a0a0;">Click circles to explore your sweet spot</p>
-</div>
-
+  
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const venns = document.querySelectorAll(".venn.sort");

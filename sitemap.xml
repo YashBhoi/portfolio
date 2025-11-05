@@ -10,21 +10,21 @@
 
   <!-- Projects page (if exists) -->
   <url>
-    <loc>https://yashbhoi.tech/projects</loc>
+    <loc>https://yashbhoi.tech/#portfolio</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.8</priority>
   </url>
 
   <!-- About page -->
   <url>
-    <loc>https://yashbhoi.tech/about</loc>
+    <loc>https://yashbhoi.tech/#about</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.8</priority>
   </url>
 
   <!-- Contact page -->
   <url>
-    <loc>https://yashbhoi.tech/contact</loc>
+    <loc>https://yashbhoi.tech/#contact</loc>
     <lastmod>2025-09-26</lastmod>
     <priority>0.7</priority>
   </url>

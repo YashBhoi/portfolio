@@ -479,6 +479,11 @@ circles.forEach(c => {
     }, 200);
   });
 });
+
+// 👇 Auto-click Circle 2 (“What I enjoy the most”) when the page loads
+window.addEventListener("load", () => {
+  document.getElementById("circle2").dispatchEvent(new Event("click"));
+});
 </script>
 
 

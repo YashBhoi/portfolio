@@ -66,6 +66,9 @@
                     <a class="link" href="#about">About</a>
                 </li>
                 <li class="item">
+                    <a class="link" href="#skills">Skills</a>
+                </li>
+                <li class="item">
                     <a class="link" href="#service">Service</a>
                 </li>
                 <li class="item">
@@ -325,164 +328,159 @@ window.onclick = function(event) {
     </section> <!-- end of about section -->
 
 
-    <!-- service section -->
-    <section class="section" id="skills">
-        <div class="container text-center">
-            <p class="section-subtitle">What I Do ?</p>
-            <h6 class="section-title mb-6">Skills</h6>
-     
-         <div id="users" class="about-text-wrapper" 
-  style="max-width:900px;position:relative;margin:auto;text-align:center;">
+   <!-- service section -->
+<section class="section" id="skills">
+  <div class="container text-center">
+    <p class="section-subtitle">What I Do ?</p>
+    <h6 class="section-title mb-3">Skills</h6>
 
-  <!-- Overlapping Circles -->
-  <div id="venn-diagram" class="about-flex venn-flex smaller-venn-flex" 
-    style="position:relative;display:flex;justify-content:center;align-items:center;margin-bottom:120px;">
+<div id="container"
+  style="display:flex;align-items:center;flex-wrap:wrap;justify-content:center;position:relative;transition:all 0.3s ease;">
 
-    <!-- Skill Circle -->
-    <div id="skill" class="venn outer sort" data-list="skill-list" 
-      style="width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:relative;z-index:2;transform:translateX(40px);">
+  <svg id="skillMap" viewBox="0 0 910 950" preserveAspectRatio="xMidYMid meet"
+    style="width:100%;max-width:420px;height:auto;display:block;flex-shrink:0;">
 
-      <svg viewBox="0 0 400 400" style="transform:rotate(266deg);width:100px;height:100px; margin-right: 43px;">
+    <!-- Circles -->
+    <circle id="circle1" cx="300" cy="350" r="200"
+      style="fill:#CACBCB;stroke:#CACBCB;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+    <circle id="circle2" cx="550" cy="350" r="200"
+      style="fill:#CACBCB;stroke:#CACBCB;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+    <circle id="circle3" cx="425" cy="600" r="200"
+      style="fill:#CACBCB;stroke:#CACBCB;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+
     <defs>
-      <path id="line1" d="M 0,200 A 200,200 0 0 1 400,300" />
-      <path id="line2" d="M 0,300 A 200.75,200 0 0 1 400,300" />
+      <path id="p1" d="M300,350 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0" />
+      <path id="p2" d="M550,350 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0" />
+      <path id="p3" d="M425,600 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0" />
     </defs>
-    <text style="text-anchor:middle;fill:#d7bfff;font-size:50px;font-weight:600; padding-top:200px;">
-      <textPath startOffset="70%" xlink:href="#line1">What I’m best at</textPath>
+
+    <!-- Circle Text -->
+    <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;">
+      <textPath href="#p1" startOffset="15%">What I’m best at</textPath>
     </text>
-  </svg>
-    </div>
-
-    <!-- Like Circle -->
-    <div id="like" class="venn outer sort" data-list="like-list" 
-      style="width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:relative;z-index:1;transform:translateX(-40px); left: 5-%;">
-      
-      <svg viewBox="0 0 400 400" style="transform:rotate(27deg);width:100px;height:100px; margin-right: 43px;">
-    <defs>
-      <path id="line1" d="M 0,200 A 200,200 0 0 1 400,300" />
-    </defs>
-    <text style="text-anchor:middle;fill:#d7bfff;font-size:50px;font-weight:600; padding-top:200px;" dy="-40px">
-      <textPath startOffset="50%" xlink:href="#line1">What I enjoy the most</textPath>
+    <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;">
+      <textPath href="#p2" startOffset="15%">What I enjoy the most</textPath>
     </text>
-  </svg>
-    </div>
-
-    <!-- Paid Circle (bottom, centered, overlapping both) -->
-    <div id="paid" class="venn outer sort" data-list="paid-list" 
-      style="width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;border:2px solid #a871ff;background:rgba(112,0,255,0.1);transition:all 0.3s ease;position:absolute;bottom:-50%;left:50%;transform:translateX(-50%);z-index:3;">
-
-       <svg viewBox="0 0 400 400" style="transform:rotate(347deg);width:100px;height:100px; margin-right: 13px;">
-    <defs>
-      <path id="line1" d="M 0,100 A 200,200 0 0 1 400,300" />
-    </defs>
-    <text style="text-anchor:middle;fill:#d7bfff;font-size:50px;font-weight:600; padding-top:200px;">
-      <textPath startOffset="50%" xlink:href="#line1">What I get paid for</textPath>
+    <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;">
+      <textPath href="#p3" startOffset="15%">What I get paid for</textPath>
     </text>
+
+    <!-- Center dots -->
+    <circle id="dot1" r="15" style="fill:#7D8794;opacity:0;transition:opacity 0.3s ease;" />
+    <circle id="dot2" r="15" style="fill:#7D8794;opacity:0;transition:opacity 0.3s ease;" />
+    <circle id="dot3" r="15" style="fill:#7D8794;opacity:0;transition:opacity 0.3s ease;" />
+
+    <!-- Connector line -->
+    <line id="connector" x1="0" y1="0" x2="0" y2="0"
+      style="stroke:#7D8794;stroke-width:4;opacity:0;transition:all 0.6s ease;" />
   </svg>
-    </div>
+
+  <div id="infoBox"
+    style="width:280px;min-height:130px;padding:20px;
+    border-top:2px solid #7D8794;
+    border-left:2px solid #7D8794;
+    color:#111;font-weight:500;
+    padding-top: 0px;
+    text-align:left;
+    white-space:pre-line;
+    opacity:0;transform:translateX(20px);
+    transition:opacity 0.5s ease,transform 0.5s ease,border-color 0.5s ease;">
+    <span id="infoText">Click a circle</span>
   </div>
+</div>
 
-  <!-- Info Lists -->
-  <div class="downsize-flex" 
-    style="display:flex;justify-content:center;flex-wrap:wrap;gap:30px;position:relative;">
-    
-    <ul id="skill-list" class="list" 
-      style="list-style:none;padding:15px 25px;margin:0;display:none;background:rgba(255,255,255,0.05);border-radius:12px;min-width:200px;text-align:left;transition:all 0.4s ease;opacity:0;">
-      <li style="margin:8px 0;">Web Development</li>
-      <li style="margin:8px 0;">UI/UX Design</li>
-      <li style="margin:8px 0;">Problem Solving</li>
-    </ul>
-
-    <ul id="like-list" class="list" 
-      style="list-style:none;padding:15px 25px;margin:0;display:none;background:rgba(255,255,255,0.05);border-radius:12px;min-width:200px;text-align:left;transition:all 0.4s ease;opacity:0;">
-      <li style="margin:8px 0;">Designing interfaces</li>
-      <li style="margin:8px 0;">Creating animations</li>
-      <li style="margin:8px 0;">Learning new tech</li>
-    </ul>
-
-    <ul id="paid-list" class="list" 
-      style="list-style:none;padding:15px 25px;margin:0;display:none;background:rgba(255,255,255,0.05);border-radius:12px;min-width:200px;text-align:left;transition:all 0.4s ease;opacity:0;">
-      <li style="margin:8px 0;">Freelance projects</li>
-      <li style="margin:8px 0;">UI improvements</li>
-      <li style="margin:8px 0;">Website builds</li>
-    </ul>
-  </div>
-
-  <!-- Connector Line -->
-  <div id="connector" 
-    style="position:absolute;height:3px;background:linear-gradient(90deg,#a871ff,#d9b6ff);transform-origin:left center;top:0;left:0;display:none;border-radius:2px;transition:width 0.4s ease,transform 0.4s ease,top 0.4s ease,left 0.4s ease;">
-    <div id="arrow" 
-      style="position:absolute;right:-6px;top:50%;transform:translateY(-50%) rotate(45deg);width:10px;height:3px;background:#b666ff;border-radius:2px;"></div>
-    <div id="arrow2" 
-      style="position:absolute;right:-6px;top:50%;transform:translateY(-50%) rotate(-45deg);width:10px;height:3px;background:#b666ff;border-radius:2px;"></div>
-  </div>
-
-  
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const venns = document.querySelectorAll(".venn.sort");
-  const lists = document.querySelectorAll(".list");
-  const connector = document.getElementById("connector");
+const circles = document.querySelectorAll("#skillMap circle");
+const infoBox = document.getElementById("infoBox");
+const infoText = document.getElementById("infoText");
+const container = document.getElementById("container");
+const connector = document.getElementById("connector");
 
-  lists.forEach(l => l.style.display = "none");
+const infoData = {
+  circle1: "Designing & coding websites\nMaintaining websites\nTroubleshooting technology",
+  circle2: "Designing & coding websites\nMaintaining websites\nReviewing peoples’ work\nWriting novels/poems\nMaking hip-hop music",
+  circle3: "Designing & coding websites & Apps\nMaintaining websites\nConsulting with clients\nBrand designing"
+};
 
-  venns.forEach(venn => {
-    venn.addEventListener("click", () => {
-      // Reset all
-      venns.forEach(v => {
-        v.style.background = "rgba(112,0,255,0.1)";
-        v.style.boxShadow = "none";
-        v.style.transform = v.id === "skill" ? "translateX(40px)" : 
-                            v.id === "like" ? "translateX(-40px)" :
-                            "translateX(-50%)";
-      });
-      lists.forEach(l => { l.style.display = "none"; l.style.opacity = "0"; });
-      connector.style.display = "none";
-      connector.style.width = "0px";
+const dots = {
+  circle1: document.getElementById("dot1"),
+  circle2: document.getElementById("dot2"),
+  circle3: document.getElementById("dot3")
+};
 
-      // Activate clicked circle
-      venn.style.background = "linear-gradient(135deg,#7d19ff,#b666ff)";
-      venn.style.boxShadow = "0 0 20px rgba(183,111,255,0.5)";
-      venn.style.transform += " scale(1.05)";
+let activeCircle = null;
 
-      // Show its list
-      const listId = venn.getAttribute("data-list");
-      const listEl = document.getElementById(listId);
-      if (listEl) {
-        listEl.style.display = "block";
-        setTimeout(() => listEl.style.opacity = "1", 10);
-      }
+function updateLayout() {
+  container.style.flexDirection = window.innerWidth < 750 ? "column" : "row";
+}
 
-      // Connector line animation
-      const rect1 = venn.getBoundingClientRect();
-      const rect2 = listEl.getBoundingClientRect();
-      const parentRect = document.getElementById("users").getBoundingClientRect();
+function repositionConnector() {
+  if (!activeCircle) return;
 
-      const x1 = rect1.left + rect1.width / 2 - parentRect.left;
-      const y1 = rect1.top + rect1.height / 2 - parentRect.top;
-      const x2 = rect2.left + rect2.width / 2 - parentRect.left;
-      const y2 = rect2.top - parentRect.top;
+  const svg = document.getElementById("skillMap");
+  const svgRect = svg.getBoundingClientRect();
+  const boxRect = infoBox.getBoundingClientRect();
 
-      const dx = x2 - x1;
-      const dy = y2 - y1;
-      const length = Math.sqrt(dx * dx + dy * dy);
-      const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+  const x1 = +activeCircle.getAttribute("cx");
+  const y1 = +activeCircle.getAttribute("cy");
 
-      connector.style.display = "block";
-      connector.style.top = y1 + "px";
-      connector.style.left = x1 + "px";
-      connector.style.transform = "rotate(" + angle + "deg)";
-      connector.style.transition = "none";
-      connector.style.width = "0px";
+  const isMobile = window.innerWidth < 750;
+  let x2, y2;
+
+  if (isMobile) {
+    const svgY = ((boxRect.top - svgRect.top) / svgRect.height) * 950;
+    y2 = svgY - 5;
+    x2 = x1;
+  } else {
+    const svgX = ((boxRect.left - svgRect.left) / svgRect.width) * 900;
+    x2 = svgX - 5;
+    y2 = y1;
+  }
+
+  connector.setAttribute("x1", x1);
+  connector.setAttribute("y1", y1);
+  connector.setAttribute("x2", x2);
+  connector.setAttribute("y2", y2);
+  connector.style.opacity = "1";
+}
+
+window.addEventListener("resize", () => {
+  updateLayout();
+  repositionConnector();
+});
+
+updateLayout();
+
+circles.forEach(c => {
+  c.addEventListener("click", () => {
+    activeCircle = c;
+    circles.forEach(o => o.style.opacity = "0.4");
+    c.style.opacity = "1";
+
+    Object.values(dots).forEach(d => d.style.opacity = "0");
+    infoBox.style.opacity = "0";
+    connector.style.opacity = "0";
+    infoText.textContent = "";
+
+    setTimeout(() => {
+      const x1 = +c.getAttribute("cx");
+      const y1 = +c.getAttribute("cy");
+      const dot = dots[c.id];
+      dot.setAttribute("cx", x1);
+      dot.setAttribute("cy", y1);
+      dot.style.opacity = "1";
 
       setTimeout(() => {
-        connector.style.transition = "width 0.6s ease, transform 0.4s ease, top 0.4s ease, left 0.4s ease";
-        connector.style.width = length + "px";
-      }, 20);
-    });
+        infoBox.style.opacity = "1";
+        infoText.textContent = infoData[c.id];
+        infoBox.style.transform = window.innerWidth < 750 ? "translateY(10px)" : "translateX(0)";
+        repositionConnector();
+      }, 600);
+    }, 200);
   });
 });
 </script>
+
 
  </div>
     <!-- service section -->
@@ -946,18 +944,22 @@ window.addEventListener('load', adjustFooterLayout);
 </script>
 
 
-	<!-- core  -->
+</script>
+
+
+  <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+  <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Meyawo js -->
     <script src="assets/js/portjs.js"></script>
- 
-</body>
+   
 
-</style>
+
+  
+</body>XCVDV DV DFDF DV
 
 </html>

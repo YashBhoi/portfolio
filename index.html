@@ -341,17 +341,17 @@ window.onclick = function(event) {
     style="width:100%;max-width:420px;height:auto;display:block;flex-shrink:0;">
 
     <!-- Circles -->
-    <circle id="circle1" cx="300" cy="350" r="200"
-      style="fill:#CACBCB;stroke:#CACBCB;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
-    <circle id="circle2" cx="550" cy="350" r="200"
-      style="fill:#CACBCB;stroke:#CACBCB;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
-    <circle id="circle3" cx="425" cy="600" r="200"
-      style="fill:#CACBCB;stroke:#CACBCB;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+    <circle id="circle1" cx="300" cy="350" r="250"
+      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+    <circle id="circle2" cx="600" cy="350" r="250"
+      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+    <circle id="circle3" cx="450" cy="650" r="250"
+      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
 
     <defs>
-      <path id="p1" d="M300,350 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0" />
-      <path id="p2" d="M550,350 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0" />
-      <path id="p3" d="M425,600 m-200,0 a200,200 0 1,1 400,0 a200,200 0 1,1 -400,0" />
+      <path id="p1" d="M 300,350 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
+      <path id="p2" d="M 600,350 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
+      <path id="p3" d="M 450,650 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
     </defs>
 
     <!-- Circle Text -->
@@ -366,19 +366,19 @@ window.onclick = function(event) {
     </text>
 
     <!-- Center dots -->
-    <circle id="dot1" r="15" style="fill:#7D8794;opacity:0;transition:opacity 0.3s ease;" />
-    <circle id="dot2" r="15" style="fill:#7D8794;opacity:0;transition:opacity 0.3s ease;" />
-    <circle id="dot3" r="15" style="fill:#7D8794;opacity:0;transition:opacity 0.3s ease;" />
+    <circle id="dot1" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
+    <circle id="dot2" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
+    <circle id="dot3" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
 
     <!-- Connector line -->
     <line id="connector" x1="0" y1="0" x2="0" y2="0"
-      style="stroke:#7D8794;stroke-width:4;opacity:0;transition:all 0.6s ease;" />
+      style="stroke:#7d8694;stroke-width:4;opacity:0;transition:all 0.6s ease;" />
   </svg>
 
   <div id="infoBox"
     style="width:280px;min-height:130px;padding:20px;
-    border-top:2px solid #7D8794;
-    border-left:2px solid #7D8794;
+    border-top:2px solid #7d8694;
+    border-left:2px solid #7d8694;
     color:#111;font-weight:500;
     padding-top: 0px;
     text-align:left;
@@ -454,14 +454,26 @@ updateLayout();
 circles.forEach(c => {
   c.addEventListener("click", () => {
     activeCircle = c;
-    circles.forEach(o => o.style.opacity = "0.4");
+
+    const idsToReset = ["circle1","circle2", "circle3"];
+idsToReset.forEach(id => {
+  const c = document.getElementById(id);
+  c.style.fill = "#cbcaca4d";
+  c.style.stroke = "#cbcaca4d";
+});
+
+    // Highlight the active circle in blue
+    c.style.fill = "#46b9e56b";   // Dodger blue
+    c.style.stroke = "#46b9e56b";
     c.style.opacity = "1";
 
+    // Reset dots and info box visibility
     Object.values(dots).forEach(d => d.style.opacity = "0");
     infoBox.style.opacity = "0";
     connector.style.opacity = "0";
     infoText.textContent = "";
 
+    // Delay animation for smoother transitions
     setTimeout(() => {
       const x1 = +c.getAttribute("cx");
       const y1 = +c.getAttribute("cy");

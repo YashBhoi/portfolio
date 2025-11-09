@@ -28,7 +28,7 @@
 
     <!-- Favicon -->
 
-    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
 <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
@@ -340,13 +340,20 @@ window.onclick = function(event) {
   <svg id="skillMap" viewBox="0 0 910 950" preserveAspectRatio="xMidYMid meet"
     style="width:100%;max-width:420px;height:auto;display:block;flex-shrink:0;">
 
-    <!-- Circles -->
+             <!--<div class="blob" style="width: 150px;height: 150px;background-color: hotpink;border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;" </div> -->  
+  
+              <!-- Circles -->
     <circle id="circle1" cx="300" cy="350" r="250"
-      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
     <circle id="circle2" cx="600" cy="350" r="250"
-      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
     <circle id="circle3" cx="450" cy="650" r="250"
-      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0, 0, 0, 0.5));" />
+      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
+
+    <!-- Sweet Spot Area (covers intersection of all 3 circles) -->
+    <path id="sweetSpot" 
+          d="M 400,400 Q 450,350 500,400 Q 470,450 500,500 Q 450,550 400,500 Q 430,450 400,400 Z"
+          style="fill:#0000;stroke:#0000;cursor:pointer;transition:all 0.3s ease;" />
 
     <defs>
       <path id="p1" d="M 300,350 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
@@ -365,10 +372,13 @@ window.onclick = function(event) {
       <textPath href="#p3" startOffset="15%">What I get paid for</textPath>
     </text>
 
+    
+
     <!-- Center dots -->
     <circle id="dot1" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
     <circle id="dot2" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
     <circle id="dot3" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
+    <circle id="dotSweet" r="15" style="fill:#46b9e5;opacity:0;transition:opacity 0.3s ease;" />
 
     <!-- Connector line -->
     <line id="connector" x1="0" y1="0" x2="0" y2="0"
@@ -391,6 +401,7 @@ window.onclick = function(event) {
 
 <script>
 const circles = document.querySelectorAll("#skillMap circle");
+const sweetSpot = document.getElementById("sweetSpot");
 const infoBox = document.getElementById("infoBox");
 const infoText = document.getElementById("infoText");
 const container = document.getElementById("container");
@@ -399,13 +410,15 @@ const connector = document.getElementById("connector");
 const infoData = {
   circle1: "Designing & coding websites\nMaintaining websites\nTroubleshooting technology",
   circle2: "Designing & coding websites\nMaintaining websites\nReviewing peoples’ work\nWriting novels/poems\nMaking hip-hop music",
-  circle3: "Designing & coding websites & Apps\nMaintaining websites\nConsulting with clients\nBrand designing"
+  circle3: "Designing & coding websites & Apps\nMaintaining websites\nConsulting with clients\nBrand designing",
+  sweetSpot: "This is your sweet spot!\nWhere your skills, passions, and earnings intersect."
 };
 
 const dots = {
   circle1: document.getElementById("dot1"),
   circle2: document.getElementById("dot2"),
-  circle3: document.getElementById("dot3")
+  circle3: document.getElementById("dot3"),
+  sweetSpot: document.getElementById("dotSweet")
 };
 
 let activeCircle = null;
@@ -421,8 +434,8 @@ function repositionConnector() {
   const svgRect = svg.getBoundingClientRect();
   const boxRect = infoBox.getBoundingClientRect();
 
-  const x1 = +activeCircle.getAttribute("cx");
-  const y1 = +activeCircle.getAttribute("cy");
+  let x1 = +activeCircle.getAttribute("cx") || 450; // fallback for sweetSpot
+  let y1 = +activeCircle.getAttribute("cy") || 450;
 
   const isMobile = window.innerWidth < 750;
   let x2, y2;
@@ -437,7 +450,7 @@ function repositionConnector() {
     y2 = y1;
   }
 
-  connector.setAttribute("x1", x1);
+  connector.setAttribute("x1", x1+10);
   connector.setAttribute("y1", y1);
   connector.setAttribute("x2", x2);
   connector.setAttribute("y2", y2);
@@ -451,32 +464,34 @@ window.addEventListener("resize", () => {
 
 updateLayout();
 
-circles.forEach(c => {
+const allCircles = [...circles, sweetSpot];
+
+allCircles.forEach(c => {
   c.addEventListener("click", () => {
     activeCircle = c;
 
-    const idsToReset = ["circle1","circle2", "circle3"];
-idsToReset.forEach(id => {
-  const c = document.getElementById(id);
-  c.style.fill = "#cbcaca4d";
-  c.style.stroke = "#cbcaca4d";
-});
+    // Reset all circles
+    ["circle1","circle2","circle3","sweetSpot"].forEach(id => {
+      const el = document.getElementById(id);
+      el.style.fill = id === "sweetSpot" ? "#0000" : "#cbcaca4d";
+      el.style.stroke = id === "sweetSpot" ? "#0000" : "#cbcaca4d";
+    });
 
-    // Highlight the active circle in blue
-    c.style.fill = "#46b9e56b";   // Dodger blue
-    c.style.stroke = "#46b9e56b";
-    c.style.opacity = "1";
+    // Highlight active circle (skip sweetSpot)
+    if(c.id !== "sweetSpot"){
+      c.style.fill = "#46b9e56b";
+      c.style.stroke = "#46b9e56b";
+    }
 
-    // Reset dots and info box visibility
+    // Reset dots and info box
     Object.values(dots).forEach(d => d.style.opacity = "0");
     infoBox.style.opacity = "0";
     connector.style.opacity = "0";
     infoText.textContent = "";
 
-    // Delay animation for smoother transitions
     setTimeout(() => {
-      const x1 = +c.getAttribute("cx");
-      const y1 = +c.getAttribute("cy");
+      let x1 = +c.getAttribute("cx") || 450;
+      let y1 = +c.getAttribute("cy") || 450;
       const dot = dots[c.id];
       dot.setAttribute("cx", x1);
       dot.setAttribute("cy", y1);
@@ -492,11 +507,12 @@ idsToReset.forEach(id => {
   });
 });
 
-// 👇 Auto-click Circle 2 (“What I enjoy the most”) when the page loads
+// Auto-click Circle 2 on load
 window.addEventListener("load", () => {
   document.getElementById("circle2").dispatchEvent(new Event("click"));
 });
 </script>
+
 
 
  </div>
@@ -973,9 +989,6 @@ window.addEventListener('load', adjustFooterLayout);
 
     <!-- Meyawo js -->
     <script src="assets/js/portjs.js"></script>
-   
-
-
-  
+ 
 </body>
 </html>

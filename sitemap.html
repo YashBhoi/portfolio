@@ -7,85 +7,90 @@
   <meta name="robots" content="noindex, follow">
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: 'Poppins', sans-serif;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
     }
 
-    body{
-      height:100vh;
-      background: linear-gradient(135deg,#0f172a,#020617);
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:#fff;
+    body {
+      background: #0b0f19;
+      color: #e5e7eb;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .container{
-      width:90%;
-      max-width:600px;
-      padding:40px;
-      border-radius:20px;
-      backdrop-filter: blur(20px);
-      background: rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.1);
-      box-shadow:0 8px 30px rgba(0,0,0,0.4);
+    .sitemap-wrapper {
+      width: 90%;
+      max-width: 700px;
+      padding: 50px 40px;
+      background: #111827;
+      border-radius: 12px;
+      border: 1px solid #1f2937;
     }
 
-    h1{
-      text-align:center;
-      margin-bottom:30px;
-      font-weight:600;
-      letter-spacing:1px;
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #f9fafb;
+      letter-spacing: 0.5px;
     }
 
-    ul{
-      list-style:none;
+    ul {
+      list-style: none;
     }
 
-    li{
-      margin:15px 0;
+    li {
+      margin-bottom: 14px;
     }
 
-    a{
-      display:block;
-      padding:15px 20px;
-      border-radius:12px;
-      text-decoration:none;
-      color:#fff;
-      background: rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.15);
-      transition:0.3s ease;
+    a {
+      display: block;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: #d1d5db;
+      border: 1px solid #1f2937;
+      border-radius: 8px;
+      background: #020617;
+      transition: all 0.25s ease;
+      font-size: 15px;
     }
 
-    a:hover{
-      transform:translateX(5px) scale(1.02);
-      background:rgba(255,255,255,0.15);
-      box-shadow:0 5px 20px rgba(0,0,0,0.5);
+    a:hover {
+      background: #1f2937;
+      color: #ffffff;
+      transform: translateX(3px);
     }
 
-    footer{
-      text-align:center;
-      margin-top:25px;
-      font-size:14px;
-      opacity:0.7;
+    footer {
+      margin-top: 35px;
+      font-size: 13px;
+      color: #6b7280;
+      text-align: center;
     }
 
+    @media (max-width: 500px) {
+      .sitemap-wrapper {
+        padding: 40px 25px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="sitemap-wrapper">
     <h1>Website Sitemap</h1>
 
     <ul>
-      <li><a href="https://yashbhoi.tech/">🏠 Home</a></li>
-      <li><a href="https://yashbhoi.tech/#portfolio">💼 Portfolio</a></li>
-      <li><a href="https://yashbhoi.tech/#about">🙋 About</a></li>
-      <li><a href="https://yashbhoi.tech/#contact">📩 Contact</a></li>
+      <li><a href="https://yashbhoi.tech/">Home</a></li>
+      <li><a href="https://yashbhoi.tech/#portfolio">Portfolio</a></li>
+      <li><a href="https://yashbhoi.tech/#about">About</a></li>
+      <li><a href="https://yashbhoi.tech/#contact">Contact</a></li>
     </ul>
 
     <footer>

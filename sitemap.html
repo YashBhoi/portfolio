@@ -3,45 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HTML Sitemap - yashbhoi.tech</title>
+  <title>Sitemap | yashbhoi.tech</title>
   <meta name="robots" content="noindex, follow">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      background: #f9f9f9;
-      color: #222;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Poppins', sans-serif;
     }
-    h1 {
-      margin-bottom: 20px;
+
+    body{
+      height:100vh;
+      background: linear-gradient(135deg,#0f172a,#020617);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#fff;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+
+    .container{
+      width:90%;
+      max-width:600px;
+      padding:40px;
+      border-radius:20px;
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:0 8px 30px rgba(0,0,0,0.4);
     }
-    li {
-      margin: 10px 0;
+
+    h1{
+      text-align:center;
+      margin-bottom:30px;
+      font-weight:600;
+      letter-spacing:1px;
     }
-    a {
-      text-decoration: none;
-      color: #0073e6;
-      font-size: 18px;
+
+    ul{
+      list-style:none;
     }
-    a:hover {
-      text-decoration: underline;
+
+    li{
+      margin:15px 0;
     }
+
+    a{
+      display:block;
+      padding:15px 20px;
+      border-radius:12px;
+      text-decoration:none;
+      color:#fff;
+      background: rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15);
+      transition:0.3s ease;
+    }
+
+    a:hover{
+      transform:translateX(5px) scale(1.02);
+      background:rgba(255,255,255,0.15);
+      box-shadow:0 5px 20px rgba(0,0,0,0.5);
+    }
+
+    footer{
+      text-align:center;
+      margin-top:25px;
+      font-size:14px;
+      opacity:0.7;
+    }
+
   </style>
 </head>
 
 <body>
 
-  <h1>HTML Sitemap</h1>
-  <ul>
-    <li><a href="https://yashbhoi.tech/">Home</a></li>
-    <li><a href="https://yashbhoi.tech/#portfolio">Portfolio</a></li>
-    <li><a href="https://yashbhoi.tech/#about">About</a></li>
-    <li><a href="https://yashbhoi.tech/#contact">Contact</a></li>
-  </ul>
+  <div class="container">
+    <h1>Website Sitemap</h1>
+
+    <ul>
+      <li><a href="https://yashbhoi.tech/">🏠 Home</a></li>
+      <li><a href="https://yashbhoi.tech/#portfolio">💼 Portfolio</a></li>
+      <li><a href="https://yashbhoi.tech/#about">🙋 About</a></li>
+      <li><a href="https://yashbhoi.tech/#contact">📩 Contact</a></li>
+    </ul>
+
+    <footer>
+      © 2026 yashbhoi.tech
+    </footer>
+  </div>
 
 </body>
 </html>

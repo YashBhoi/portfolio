@@ -1,1111 +1,658 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="I'm Yash Bhoi. A web & App designer and developer. Here you can explore the creative work that I've done over the years.">
-    <meta name="keywords" content="Yash Bhoi, web design, graphic design, freelance, responsive design, mobile design, web development, higher education, instructional design, media communication, technology, digital design, creative portfolio, affordable design, resume design, presentation design, accessibility, inclusive design">
-    <meta name="author" content="Yash Bhoi">
-    <title>Yash Bhoi - Web & App Developer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="I'm Yash Bhoi. A web & App designer and developer. Here you can explore the creative work that I've done over the years.">
+  <meta name="keywords" content="Yash Bhoi, web design, graphic design, freelance, responsive design, mobile design, web development, app development, creative portfolio">
+  <meta name="author" content="Yash Bhoi">
+  <title>Yash Bhoi - Web & App Developer</title>
 
-
-    <!-- SEO + Branding -->
+  <!-- SEO + Branding -->
   <meta name="theme-color" content="#000000">
-	<meta property="og:site_name" content="Yash Bhoi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yashbhoi.tech/">
+  <meta property="og:site_name" content="Yash Bhoi">
   <meta property="og:title" content="Yash Bhoi">
   <meta property="og:description" content="I'm Yash Bhoi. A web & App designer and developer. Here you can explore the creative work that I've done over the years.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://yashbhoi.tech/assets/favicon/favicon.svg">
   <meta property="og:url" content="https://yashbhoi.tech/">
-	 <link rel="canonical" href="https://yashbhoi.tech/">
 
-	<meta name="robots" content="index, follow">
+  <!-- Twitter (Twitter/X uses name=, not property=) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://yashbhoi.tech/">
+  <meta name="twitter:title" content="Yash Bhoi">
+  <meta name="twitter:description" content="I'm Yash Bhoi. A web & App designer and developer. Here you can explore the creative work that I've done over the years.">
+  <meta name="twitter:image" content="https://yashbhoi.tech/assets/favicon/favicon.svg">
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://yashbhoi.tech/">
-<meta property="twitter:title" content="Yash Bhoi">
-<meta property="twitter:description" content="I'm Yash Bhoi. A web & App designer and developer. Here you can explore the creative work that I've done over the years.">
-<meta property="twitter:image" content="https://yashbhoi.tech/assets/favicon/favicon.svg">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="YashBhoi">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://yashbhoi.tech/#yashbhoi",
+    "name": "Yash Bhoi",
+    "url": "https://yashbhoi.tech/",
+    "sameAs": [
+      "https://www.linkedin.com/in/yash-bhoi-dev/",
+      "https://www.instagram.com/0yashh___/",
+      "https://x.com/0yasshh___",
+      "https://github.com/yashbhoi",
+      "https://www.kaggle.com/yash1324",
+      "https://leetcode.com/yash-bhoi/"
+    ],
+    "jobTitle": "Web & App Developer",
+    "description": "Yash Bhoi — developer, designer, and tech enthusiast.",
+    "image": "https://yashbhoi.tech/assets/favicon/favicon.svg"
+  }
+  </script>
 
+  <!-- font icons -->
+  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Favicon -->
+  <!-- Bootstrap + Meyawo main styles -->
+  <link rel="stylesheet" href="assets/css/portcss.css">
 
-<link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-<link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="YashBhoi" />
-<link rel="manifest" href="assets/favicon/site.webmanifest" />
+  <style>
+    /* ---------- Inactive domain banner ---------- */
+    .domain-notice {
+      position: fixed; top: 0; left: 0; width: 100%; min-height: 42px;
+      padding: 10px 50px 10px 20px;
+      background: #dc2626; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; font-size: 14px; font-weight: 600;
+      z-index: 99999; box-sizing: border-box;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .domain-notice-close {
+      position: absolute; right: 15px; top: 50%;
+      transform: translateY(-50%);
+      border: none; background: transparent; color: #fff;
+      font-size: 25px; line-height: 1; cursor: pointer;
+      padding: 2px 6px; opacity: 0.9;
+    }
+    .domain-notice-close:hover { opacity: 1; transform: translateY(-50%) scale(1.1); }
+    @media (max-width: 576px) {
+      .domain-notice { font-size: 13px; padding-left: 15px; }
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://yashbhoi.tech/#yashbhoi",
-  "name": "Yash Bhoi",
-  "url": "https://yashbhoi.tech/",
-  "sameAs": [
-    "https://www.linkedin.com/in/yash-bhoi-dev/",
-    "https://www.instagram.com/0yashh___/",
-    "https://x.com/0yasshh___",
-    "https://github.com/yashbhoi",
-    "https://www.kaggle.com/yash1324",
-    "https://leetcode.com/yash-bhoi/"
-  ],
-  "jobTitle": "Web & App Developer",
-  "description": "Yash Bhoi — developer, designer, and tech enthusiast.",
-  "image": "https://yashbhoi.tech/assets/favicon/favicon.svg"
-}
-</script>
+    /* ---------- Resume modal ----------
+       FIX: button rules are scoped to .modal. Previously a global ".btn" rule
+       here overrode the padding/border/radius of every .btn on the site. */
+    .modal {
+      display: none; position: fixed; z-index: 999;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .modal-content {
+      background: #fff; margin: 10% auto; padding: 20px;
+      border-radius: 15px; width: 90%; max-width: 400px;
+      text-align: center; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .modal .close { float: right; font-size: 20px; font-weight: bold; cursor: pointer; }
+    .modal .button-group { margin-top: 20px; display: flex; justify-content: space-around; }
+    .modal .btn {
+      padding: 12px 18px; border: none; border-radius: 8px;
+      cursor: pointer; font-size: 16px; transition: 0.3s;
+    }
+    .modal .btn.letter { background-color: #007bff; color: #fff; }
+    .modal .btn.letter:hover { background-color: #0056b3; }
+    .modal .btn.a4 { background-color: #28a745; color: #fff; }
+    .modal .btn.a4:hover { background-color: #1e7e34; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: scale(1); }
+    }
 
-	
+    /* About: stack on small screens */
+    @media (max-width: 768px) {
+      .about { flex-direction: column; text-align: center; }
+      .about-caption { text-align: center !important; }
+    }
 
-
-
-
-    <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Bootstrap + Meyawo main styles -->
-	<link rel="stylesheet" href="assets/css/portcss.css">
+    /* Success popup */
+    #success-popup {
+      display: none; position: fixed; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff; padding: 20px 30px; border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      text-align: center; z-index: 1000;
+    }
+  </style>
 </head>
 
+<!-- FIX: id="home" removed from <body> (it was duplicated on the header) -->
+<body data-spy="scroll" data-target=".navbar" data-offset="40">
 
-<div class="loader">
-  <img src="assets/imgs/loader.png" alt="Loading...">
-</div>
+  <!-- FIX: loader moved inside <body> (it was sitting between </head> and <body>) -->
+  <div class="loader">
+    <img src="assets/imgs/loader.png" alt="Loading...">
+  </div>
 
-
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
-<!-- Inactive Domain Notice -->
-<div id="domainNotice" class="domain-notice">
+  <!-- Inactive Domain Notice -->
+  <div id="domainNotice" class="domain-notice">
     <span>yashbhoi.tech is currently inactive.</span>
     <button class="domain-notice-close" onclick="closeDomainNotice()" aria-label="Close notification">&times;</button>
-</div>
+  </div>
 
-<style>
-.domain-notice {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 42px;
-    padding: 10px 50px 10px 20px;
-    background: #dc2626;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    z-index: 99999;
-    box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.domain-notice-close {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: transparent;
-    color: #fff;
-    font-size: 25px;
-    line-height: 1;
-    cursor: pointer;
-    padding: 2px 6px;
-    opacity: 0.9;
-}
-
-.domain-notice-close:hover {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.1);
-}
-
-@media (max-width: 576px) {
-    .domain-notice {
-        font-size: 13px;
-        padding-left: 15px;
-    }
-}
-</style>
-
-<script>
-function closeDomainNotice() {
-    document.getElementById("domainNotice").style.display = "none";
-}
-</script>
-
-
-    <!-- Page Navbar -->
-    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
-
-        <div class="container">
-            <a class="logo" href="#">Yash Bhoi</a>         
-            <ul class="nav">
-                <li class="item">
-                    <a class="link" href="#home">Home</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#about">About</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#skills">Skills</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#service">Service</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#testmonial">Testmonial</a>
-                </li>
-                <!--<li class="item">
-                    <a class="link" href="#blog">Blog</a>-->
-                </li>
-                <li class="item">
-                    <a class="link" href="#contact">Contact</a>
-                </li>
-                
-            </ul>
-            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
-                </div>
-            </a>
-        </div>          
-    </nav><!-- End of Page Navbar -->
-
-    <!-- page header -->
-    <header id="home" class="header">
-        <div class="overlay"></div>
-        <div class="header-content container">
-            <h1 class="header-title">
-                <span class="up">HI!</span>
-                <span class="down">I am Yash Bhoi</span>
-            </h1>
-            <p class="header-subtitle">WEB & APP DESIGNER</p>            
-
-            
-            <button class="btn btn-primary" onclick="window.location.href='https://github.com/yashbhoi';">Visit My Works</button>
-            <a href="https://github.com/yashbhoi" class="link"><i class="ti-github"></i></a>
-        </div>  
-        <div class="ex">
-            
-
-            </div>   
-                 
-    </header><!-- end of page header -->
-
-    <!-- about section -->
-<section class="section pt-0" id="about">
-  <!-- container -->
-  <div class="container text-center">
-    <!-- about wrapper -->
-    <div class="about" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding-top: 100px;">
-      
-      <!-- image holder -->
-      <div class="about-img-holder">
-        
-        <!-- floating bubbles
-        <div class="bubble" style="--size:60px;  --x:-60px;  --y:30px;  --z:1; --delay:0s;  --opacity:0.25;"></div>
-        <div class="bubble" style="--size:100px; --x:180px;  --y:70px;  --z:1; --delay:1s;  --opacity:0.18;"></div>
-        <div class="bubble" style="--size:50px;  --x:90px;   --y:-40px; --z:3; --delay:2s;  --opacity:0.35;"></div>
-        <div class="bubble" style="--size:80px;  --x:-120px; --y:100px; --z:1; --delay:1.5s;--opacity:0.22;"></div>
-        <div class="bubble" style="--size:70px;  --x:250px;  --y:-20px; --z:2; --delay:0.8s;--opacity:0.3;"></div>
-        <div class="bubble" style="--size:90px;  --x:-90px;  --y:-70px; --z:1; --delay:2.5s;--opacity:0.2;"></div>
-        <div class="bubble" style="--size:110px; --x:150px;  --y:130px; --z:2; --delay:1.2s;--opacity:0.25;"></div>
-        <div class="bubble" style="--size:150px;  --x:160px;   --y:150px; --z:3; --delay:0.6s;--opacity:0.28;"></div>
-        <div class="bubble" style="--size:100px; --x:210px;  --y:-90px; --z:1; --delay:1.8s;--opacity:0.2;"></div>
-        <div class="bubble" style="--size:80px;  --x:-70px;  --y:160px; --z:2; --delay:1.4s;--opacity:0.26;"></div>
-        <div class="bubble" style="--size:180px;  --x:-70px;  --y:140px; --z:2; --delay:1.4s;--opacity:0.26;"></div>
-
-        <div class="bubble2" style="--size:40px; --x:239px;  --y:200px;  --z:1; --delay:1s;  --opacity:0.18;"></div>
-        <div class="bubble2" style="--size:50px;  --x:250px;   --y:-46px; --z:3; --delay:2s;  --opacity:0.35;"></div>
-        <div class="bubble2" style="--size:80px;  --x:-150px; --y:90px; --z:1; --delay:1.5s;--opacity:0.22;"></div>
-        <div class="bubble2" style="--size:70px;  --x:250px;  --y:-20px; --z:2; --delay:0.8s;--opacity:0.3;"></div>
-        <div class="bubble2" style="--size:90px;  --x:-90px;  --y:-70px; --z:1; --delay:2.5s;--opacity:0.2;"></div>
-        <div class="bubble2" style="--size:110px; --x:150px;  --y:130px; --z:2; --delay:1.2s;--opacity:0.25;"></div>
-        <div class="bubble2" style="--size:60px;  --x:200px;   --y:400px; --z:3; --delay:0.6s;--opacity:0.28;"></div>
-         -->
-
-        <!-- floating image -->
-        <img src="assets/imgs/drawing.png" 
-             class="about-img fly-img" 
-             alt="Yash Bhoi">
-      </div>
-
-      <!-- text content -->
-      <div class="about-caption" style="flex: 1 1 400px; text-align: left; background: url(assets/imgs/pattern.png); padding: 20px; border-radius: 12px;">
-        <p class="section-subtitle">Who Am I ?</p>
-        <h2 class="section-title mb-3">About Me</h2>
-        <p>
-          I am Yash Bhoi, a professional web and app developer. My skills include proficiency in HTML, CSS, JavaScript, and frameworks like React and AngularJS. I also have experience in back-end technologies, database management and server-side programming. I have been freelancing since 2020 and honed my skills in graphic design and web development. My background in graphic design allows me to approach web development with an eye for design and user experience. 
-          <br>I am passionate about delivering innovative solutions and am the founder of YsquareTech, an IT startup that provides a wide range of IT services. I am committed to staying current with the latest technologies and advancements in web development to deliver the best results for my clients.              
-        </p>
-
-        <!-- Download Button -->
-        <button class="btn btn-primary" onclick="openModal()">Download CV</button>
-      </div>
+  <!-- Page Navbar -->
+  <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+    <div class="container">
+      <a class="logo" href="#">Yash Bhoi</a>
+      <ul class="nav">
+        <li class="item"><a class="link" href="#home">Home</a></li>
+        <li class="item"><a class="link" href="#about">About</a></li>
+        <li class="item"><a class="link" href="#skills">Skills</a></li>
+        <li class="item"><a class="link" href="#service">Service</a></li>
+        <li class="item"><a class="link" href="#portfolio">Portfolio</a></li>
+        <li class="item"><a class="link" href="#testmonial">Testimonial</a></li>
+        <li class="item"><a class="link" href="#contact">Contact</a></li>
+      </ul>
+      <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+        <div class="hamburger-box"><div class="hamburger-inner"></div></div>
+      </a>
     </div>
-  </div>
-</section>
+  </nav><!-- End of Page Navbar -->
 
-<!-- Popup Modal -->
-<div id="resumeModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Select Resume Size</h2>
-    <p>Please choose which version of the resume you want to download:</p>
-    <div class="button-group">
-      <button class="btn letter" onclick="downloadResume('letter')">📄 Letter Size</button>
-      <button class="btn a4" onclick="downloadResume('a4')">📄 A4 Size</button>
+  <!-- page header -->
+  <header id="home" class="header">
+    <div class="overlay"></div>
+    <div class="header-content container">
+      <h1 class="header-title">
+        <span class="up">HI!</span>
+        <span class="down">I am Yash Bhoi</span>
+      </h1>
+      <p class="header-subtitle">WEB &amp; APP DESIGNER</p>
+      <button class="btn btn-primary" onclick="window.location.href='https://github.com/yashbhoi';">Visit My Works</button>
+      <a href="https://github.com/yashbhoi" class="link" aria-label="GitHub"><i class="ti-github"></i></a>
     </div>
-  </div>
-</div>
+    <div class="ex"></div>
+  </header><!-- end of page header -->
 
-<style>
-/* Image float animation
-@keyframes float {
-  0%   { transform: translateY(0px) rotate(0deg); }
-  25%  { transform: translateY(-8px) rotate(-2deg); }
-  50%  { transform: translateY(0px) rotate(1deg); }
-  75%  { transform: translateY(6px) rotate(-1deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
-}
+  <!-- about section -->
+  <section class="section pt-0" id="about">
+    <div class="container text-center">
+      <div class="about" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; padding-top:100px;">
 
-/* Bubble style 
-.bubble {
-  position: absolute;
-  width: var(--size);
-  height: var(--size);
-  left: var(--x);
-  top: var(--y);
-  background: #0000008d;
-  border-radius: 50%;
-  z-index: var(--z);
-  animation: bubbleFloat 7s ease-in-out infinite;
-  animation-delay: var(--delay);
-}
-
-/* Bubble floating motion 
-@keyframes bubbleFloat {
-  0%   { transform: translate(0, 0) scale(1); }
-  25%  { transform: translate(10px, -15px) scale(1.05); }
-  50%  { transform: translate(-5px, -25px) scale(0.95); }
-  75%  { transform: translate(8px, -10px) scale(1.02); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-.bubble2 {
-  position: absolute;
-  width: var(--size);
-  height: var(--size);
-  left: var(--x);
-  top: var(--y);
-  background: #00000052;
-  border-radius: 50%;
-  z-index: var(--z);
-  animation: bubbleFloat2 7s ease-in-out infinite;
-}
-
-/* Bubble floating motion 
-@keyframes bubbleFloat2 {
-  0%   { transform: translate(0, 0) scale(1); }
-  25%  { transform: translate(10px, -15px) scale(1.05); }
-  50%  { transform: translate(-5px, -25px) scale(0.95); }
-  75%  { transform: translate(8px, -10px) scale(1.02); }
-  100% { transform: translate(0, 0) scale(1); }
-}
- */
-
-/* Modal and buttons (kept same) */
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 999; 
-  left: 0; 
-  top: 0; 
-  width: 100%; 
-  height: 100%; 
-  background-color: rgba(0,0,0,0.6); 
-}
-.modal-content {
-  background: #fff;
-  margin: 10% auto; 
-  padding: 20px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  animation: fadeIn 0.3s ease-in-out;
-}
-.close {
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.button-group {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-.btn {
-  padding: 12px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-}
-.btn.letter {
-  background-color: #007bff;
-  color: white;
-}
-.btn.letter:hover { background-color: #0056b3; }
-.btn.a4 {
-  background-color: #28a745;
-  color: white;
-}
-.btn.a4:hover { background-color: #1e7e34; }
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
-}
-
-/* Responsive: stack content on small screens */
-@media (max-width: 768px) {
-  .about { flex-direction: column; text-align: center; }
-  .about-caption { text-align: center; }
-}
-</style>
-
-<script>
-function openModal() {
-  document.getElementById("resumeModal").style.display = "block";
-}
-function closeModal() {
-  document.getElementById("resumeModal").style.display = "none";
-}
-function downloadResume(size) {
-  let links = {
-    "letter": "https://drive.google.com/file/d/15g1lyhxzMYZG5GocAAYg3gWKHh-NyfU-/view?usp=drive_link",
-    "a4": "https://drive.google.com/file/d/1Er0uU_fwmdqKbN-8CgEqy0SV9P5VD3Mq/view?usp=drive_link"
-  };
-  window.location.href = links[size];
-  closeModal();
-}
-window.onclick = function(event) {
-  let modal = document.getElementById("resumeModal");
-  if (event.target === modal) closeModal();
-}
-</script>
-
-
-				
-				</div>              
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
-    </section> <!-- end of about section -->
-
-
-   <!-- service section -->
-<section class="section" id="skills">
-  <div class="container text-center">
-    <p class="section-subtitle">What I Do ?</p>
-    <h6 class="section-title mb-3">Skills</h6>
-
-<div id="container"
-  style="display:flex;align-items:center;flex-wrap:wrap;justify-content:center;position:relative;transition:all 0.3s ease;">
-
-  <svg id="skillMap" viewBox="0 0 910 950" preserveAspectRatio="xMidYMid meet"
-    style="width:100%;max-width:420px;height:auto;display:block;flex-shrink:0;">
-
-             <!--<div class="blob" style="width: 150px;height: 150px;background-color: hotpink;border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;" </div> -->  
-  
-              <!-- Circles -->
-    <circle id="circle1" cx="300" cy="350" r="250"
-      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
-    <circle id="circle2" cx="600" cy="350" r="250"
-      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
-    <circle id="circle3" cx="450" cy="650" r="250"
-      style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter: drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
-
-    <!-- Sweet Spot Area (covers intersection of all 3 circles) -->
-    <path id="sweetSpot" 
-          d="M 400,400 Q 450,350 500,400 Q 470,450 500,500 Q 450,550 400,500 Q 430,450 400,400 Z"
-          style="fill:#0000;stroke:#0000;cursor:pointer;transition:all 0.3s ease;" />
-
-    <defs> 
-      <path id="p1" d="M 300,350 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
-      <path id="p2" d="M 600,350 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
-      <path id="p3" d="M 450,650 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
-    </defs>
-
-    <!-- Circle Text -->
-    <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;">
-      <textPath href="#p1" startOffset="15%">What I’m best at</textPath>
-    </text>
-    <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;">
-      <textPath href="#p2" startOffset="15%">What I enjoy the most</textPath>
-    </text>
-    <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;">
-      <textPath href="#p3" startOffset="15%">What I get paid for</textPath>
-    </text>
-
-    
-
-    <!-- Center dots -->
-    <circle id="dot1" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
-    <circle id="dot2" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
-    <circle id="dot3" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
-    <circle id="dotSweet" r="15" style="fill:#46b9e5;opacity:0;transition:opacity 0.3s ease;" />
-
-    <!-- Connector line -->
-    <line id="connector" x1="0" y1="0" x2="0" y2="0"
-      style="stroke:#7d8694;stroke-width:4;opacity:0;transition:all 0.6s ease;" />
-  </svg>
-
-  <div id="infoBox"
-    style="width:280px;min-height:130px;padding:20px;
-    border-top:2px solid #7d8694;
-    border-left:2px solid #7d8694;
-    color:#111;font-weight:500;
-    padding-top: 0px;
-    text-align:left;
-    white-space:pre-line;
-    opacity:0;transform:translateX(20px);
-    transition:opacity 0.5s ease,transform 0.5s ease,border-color 0.5s ease;">
-    <span id="infoText">Click a circle</span>
-  </div>
-</div>
-
-<script>
-const circles = document.querySelectorAll("#skillMap circle");
-const sweetSpot = document.getElementById("sweetSpot");
-const infoBox = document.getElementById("infoBox");
-const infoText = document.getElementById("infoText");
-const container = document.getElementById("container");
-const connector = document.getElementById("connector");
-
-const infoData = {
-  circle1: "Designing & coding websites\nMaintaining websites\nTroubleshooting technology",
-  circle2: "Designing & coding websites\nMaintaining websites\nReviewing peoples’ work\nWriting novels/poems\nMaking hip-hop music",
-  circle3: "Designing & coding websites & Apps\nMaintaining websites\nConsulting with clients\nBrand designing",
-  sweetSpot: "This is your sweet spot!\nWhere your skills, passions, and earnings intersect."
-};
-
-const dots = {
-  circle1: document.getElementById("dot1"),
-  circle2: document.getElementById("dot2"),
-  circle3: document.getElementById("dot3"),
-  sweetSpot: document.getElementById("dotSweet")
-};
-
-let activeCircle = null;
-
-function updateLayout() {
-  container.style.flexDirection = window.innerWidth < 750 ? "column" : "row";
-}
-
-function repositionConnector() {
-  if (!activeCircle) return;
-
-  const svg = document.getElementById("skillMap");
-  const svgRect = svg.getBoundingClientRect();
-  const boxRect = infoBox.getBoundingClientRect();
-
-  let x1 = +activeCircle.getAttribute("cx") || 450; // fallback for sweetSpot
-  let y1 = +activeCircle.getAttribute("cy") || 450;
-
-  const isMobile = window.innerWidth < 750;
-  let x2, y2;
-
-  if (isMobile) {
-    const svgY = ((boxRect.top - svgRect.top) / svgRect.height) * 950;
-    y2 = svgY - 5;
-    x2 = x1;
-  } else {
-    const svgX = ((boxRect.left - svgRect.left) / svgRect.width) * 900;
-    x2 = svgX - 5;
-    y2 = y1;
-  }
-
-  connector.setAttribute("x1", x1+10);
-  connector.setAttribute("y1", y1);
-  connector.setAttribute("x2", x2);
-  connector.setAttribute("y2", y2);
-  connector.style.opacity = "1";
-}
-
-window.addEventListener("resize", () => {
-  updateLayout();
-  repositionConnector();
-});
-
-updateLayout();
-
-const allCircles = [...circles, sweetSpot];
-
-allCircles.forEach(c => {
-  c.addEventListener("click", () => {
-    activeCircle = c;
-
-    // Reset all circles
-    ["circle1","circle2","circle3","sweetSpot"].forEach(id => {
-      const el = document.getElementById(id);
-      el.style.fill = id === "sweetSpot" ? "#0000" : "#cbcaca4d";
-      el.style.stroke = id === "sweetSpot" ? "#0000" : "#cbcaca4d";
-    });
-
-    // Highlight active circle (skip sweetSpot)
-    if(c.id !== "sweetSpot"){
-      c.style.fill = "#46b9e56b";
-      c.style.stroke = "#46b9e56b";
-    }
-
-    // Reset dots and info box
-    Object.values(dots).forEach(d => d.style.opacity = "0");
-    infoBox.style.opacity = "0";
-    connector.style.opacity = "0";
-    infoText.textContent = "";
-
-    setTimeout(() => {
-      let x1 = +c.getAttribute("cx") || 450;
-      let y1 = +c.getAttribute("cy") || 450;
-      const dot = dots[c.id];
-      dot.setAttribute("cx", x1);
-      dot.setAttribute("cy", y1);
-      dot.style.opacity = "1";
-
-      setTimeout(() => {
-        infoBox.style.opacity = "1";
-        infoText.textContent = infoData[c.id];
-        infoBox.style.transform = window.innerWidth < 750 ? "translateY(10px)" : "translateX(0)";
-        repositionConnector();
-      }, 600);
-    }, 200);
-  });
-});
-
-// Auto-click Circle 2 on load
-window.addEventListener("load", () => {
-  document.getElementById("circle2").dispatchEvent(new Event("click"));
-});
-</script>
-
-
-
- </div>
-    <!-- service section -->
-    <section class="section" id="service">
-        <div class="container text-center">
-            <p class="section-subtitle">What I Do ?</p>
-            <h6 class="section-title mb-6">Service</h6>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/analytics.svg" alt="ysquaretech.com" class="icon">
-                            <h6 class="title">Web development</h6>
-                            <p class="subtitle"> Web design, development,   <br> e-commerce, custom apps, responsive, CMS, maintenance, optimization, migrations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/responsive.svg" alt="ysquaretech.com" class="icon">
-                            <h6 class="title">App development</h6>
-                            <p class="subtitle">Mobile app design <br> for iOS and Android, cross-platform, custom development, maintenance, and optimization.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/ads.svg" alt="ysquaretech.com" class="icon">
-                            <h6 class="title">Branding services</h6>
-                            <p class="subtitle"> logo design, brand strategy, visual identity, packaging design, marketing collateral,<br> and website design.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/pencil-case.svg" alt="ysquaretech.com" class="icon">
-                            <h6 class="title">Graphic Designing</h6>
-                            <p class="subtitle">Creative, custom <br>graphic design services for branding, websites, marketing materials.</p>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- end of row -->
+        <!-- image holder -->
+        <div class="about-img-holder">
+          <img src="assets/imgs/drawing.png" class="about-img fly-img" alt="Illustration of Yash Bhoi">
         </div>
-    </section><!-- end of service section -->
 
-    <!-- portfolio section -->
-    <section class="section" id="portfolio">
-        <div class="container text-center">
-            <p class="section-subtitle">What I Did ?</p>
-            <h6 class="section-title mb-6">Portfolio</h6>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="https://ysquaretech.com/" class="portfolio-card">
-                        <img src="assets/imgs/folio-1.png" class="portfolio-card-img" alt="ysquartech.com">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Web Designing</h5>
-                                <p class="font-weight-normal">Category: Web development</p>
-                            </span>                         
-                        </span>                     
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://ysquaretech.com/" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded" alt="ysquaretech.com">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>App Designing</h5>
-                                <p class="font-weight-normal">Category: App development</p>
-                            </span>                         
-                        </span>                         
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://ysquaretech.com/" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded" alt="ysquaretech.com">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Branding Services</h5>
-                                <p class="font-weight-normal">Category: Branding & Digital Marketing</p>
-                            </span>                         
-                        </span>                     
-                    </a>
-                </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
-    </section> <!-- end of portfolio section -->
+        <!-- text content -->
+        <div class="about-caption" style="flex:1 1 400px; text-align:left; background:url(assets/imgs/pattern.png); padding:20px; border-radius:12px;">
+          <p class="section-subtitle">Who Am I ?</p>
+          <h2 class="section-title mb-3">About Me</h2>
+          <p>
+            I am Yash Bhoi, a professional web and app developer. My skills include proficiency in HTML, CSS, JavaScript, and frameworks like React and AngularJS. I also have experience in back-end technologies, database management and server-side programming. I have been freelancing since 2020 and honed my skills in graphic design and web development. My background in graphic design allows me to approach web development with an eye for design and user experience.
+            <br>I am passionate about delivering innovative solutions and am the founder of YsquareTech, an IT startup that provides a wide range of IT services. I am committed to staying current with the latest technologies and advancements in web development to deliver the best results for my clients.
+          </p>
+          <button class="btn btn-primary" onclick="openModal()">Download CV</button>
+        </div>
 
-    <!-- pricing section -->
-    <!--<section class="section" id="pricing">
-        <div class="container text-center">
-            <p class="section-subtitle">How Much I Charge ?</p>
-            <h6 class="section-title mb-6">My Pricing</h6>
-            <!-- row -->
-            <!--<div class="pricing-wrapper">
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/scooter.svg" alt="ysquaretech.com">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Free</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p><i class="ti-close"></i></p>
-                            <p><i class="ti-close"></i></p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>0.00/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/shipped.svg" alt="ysquaretech.com">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Basic</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p>accusamus laboriosam</p>
-                            <p><i class="ti-close"></i></p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>9.99/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/startup.svg" alt="ysquaretech.com">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Premium</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p>accusamus laboriosam</p>
-                            <p>inventore omnis</p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>99.9/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
+      </div>
+    </div>
+  </section><!-- end of about section -->
 
-            </div><!-- end of pricing wrapper -->
-        </div> <!-- end of container -->
-    </section><!-- end of pricing section -->
+  <!-- Resume popup modal -->
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Select Resume Size</h2>
+      <p>Please choose which version of the resume you want to download:</p>
+      <div class="button-group">
+        <button class="btn letter" onclick="downloadResume('letter')">📄 Letter Size</button>
+        <button class="btn a4" onclick="downloadResume('a4')">📄 A4 Size</button>
+      </div>
+    </div>
+  </div>
 
-    <!-- section -->
-    <section class="section-sm bg-primary">
-        <!-- container -->
-        <div class="container text-center text-sm-left">
-            <!-- row -->
-            <div class="row align-items-center">
-                <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Want to work with me?</h6>
-                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
-                </div>
-                <div class="col-sm offset-sm-2 offset-md-3">
-                    <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href = 'mailto:yashbhoi013@gmail.com';">Hire Me</button>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of section -->
+  <!-- skills section -->
+  <section class="section" id="skills">
+    <div class="container text-center">
+      <p class="section-subtitle">What I Do ?</p>
+      <h6 class="section-title mb-3">Skills</h6>
 
-    <!-- testimonial section -->
-    <section class="section" id="testmonial">
-        <div class="container text-center">
-            <p class="section-subtitle">What Think Client About Me ?</p>
-            <h6 class="section-title mb-6">Testmonial</h6>
+      <div id="container" style="display:flex;align-items:center;flex-wrap:wrap;justify-content:center;position:relative;transition:all 0.3s ease;">
 
-            <!-- row -->
-            <!--<div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/avatar2.jpg" class="testimonial-card-img" alt="ysquaretech.com">                           
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/avatar3.jpg" class="testimonial-card-img" alt="ysquaretech.com">                        
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
-                    </div>
-                </div>
+        <svg id="skillMap" viewBox="0 0 910 950" preserveAspectRatio="xMidYMid meet"
+             style="width:100%;max-width:420px;height:auto;display:block;flex-shrink:0;">
+
+          <circle id="circle1" cx="300" cy="350" r="250"
+            style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter:drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
+          <circle id="circle2" cx="600" cy="350" r="250"
+            style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter:drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
+          <circle id="circle3" cx="450" cy="650" r="250"
+            style="fill:#cbcaca4d;stroke:#cbcaca4d;stroke-width:2;cursor:pointer;transition:all 0.3s ease;filter:drop-shadow(0px 0px 18px rgba(0,0,0,0.5));" />
+
+          <!-- Sweet spot (intersection of all 3 circles) -->
+          <path id="sweetSpot"
+                d="M 400,400 Q 450,350 500,400 Q 470,450 500,500 Q 450,550 400,500 Q 430,450 400,400 Z"
+                style="fill:#0000;stroke:#0000;cursor:pointer;transition:all 0.3s ease;" />
+
+          <defs>
+            <path id="p1" d="M 300,350 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
+            <path id="p2" d="M 600,350 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
+            <path id="p3" d="M 450,650 m -250,0 a 250,250 0 1,1 500,0 a 250,250 0 1,1 -500,0" />
+          </defs>
+
+          <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;"><textPath href="#p1" startOffset="15%">What I’m best at</textPath></text>
+          <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;"><textPath href="#p2" startOffset="15%">What I enjoy the most</textPath></text>
+          <text text-anchor="middle" style="font-size:32px;fill:#000;font-weight:600;"><textPath href="#p3" startOffset="15%">What I get paid for</textPath></text>
+
+          <circle id="dot1" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
+          <circle id="dot2" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
+          <circle id="dot3" r="15" style="fill:#7d8694;opacity:0;transition:opacity 0.3s ease;" />
+          <circle id="dotSweet" r="15" style="fill:#46b9e5;opacity:0;transition:opacity 0.3s ease;" />
+
+          <line id="connector" x1="0" y1="0" x2="0" y2="0"
+                style="stroke:#7d8694;stroke-width:4;opacity:0;transition:all 0.6s ease;" />
+        </svg>
+
+        <div id="infoBox"
+             style="width:280px;min-height:130px;padding:0 20px 20px;
+                    border-top:2px solid #7d8694;border-left:2px solid #7d8694;
+                    color:#111;font-weight:500;text-align:left;white-space:pre-line;
+                    opacity:0;transform:translateX(20px);
+                    transition:opacity 0.5s ease,transform 0.5s ease,border-color 0.5s ease;">
+          <span id="infoText">Click a circle</span>
+        </div>
+      </div>
+    </div>
+  </section><!-- end of skills section (FIX: this </section> was missing, so Service was nested inside Skills) -->
+
+  <!-- service section -->
+  <section class="section" id="service">
+    <div class="container text-center">
+      <p class="section-subtitle">What I Do ?</p>
+      <h6 class="section-title mb-6">Service</h6>
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="body">
+              <img src="assets/imgs/analytics.svg" alt="Web development icon" class="icon">
+              <h6 class="title">Web development</h6>
+              <p class="subtitle">Web design, development, <br> e-commerce, custom apps, responsive, CMS, maintenance, optimization, migrations.</p>
             </div>
-        </div> <!-- end of container --> Update Soon
-    </section> <!-- end of testimonial section -->
-    
-    <!-- blog section -->
-   <!-- <section class="section" id="blog">
-        <!-- container -->
-        <!--<div class="container text-center">
-            <p class="section-subtitle">Recent Posts?</p>
-            <h6 class="section-title mb-6">Blog</h6>
-            <!-- blog-wrapper -->
-            <!--<div class="blog-card">
-                <div class="blog-card-header">
-                    <img src="assets/imgs/img-1.jpg" class="blog-card-img" alt="ysquaretech.com">
-                </div>
-                <div class="blog-card-body">
-                    <h5 class="blog-card-title">Consectetur adipisicing elit</h6>
-
-                    <p class="blog-card-caption">
-                        <a href="#">By: Admin</a>
-                        <a href="#"><i class="ti-heart text-danger"></i> 234</a>
-                        <a href="#"><i class="ti-comment"></i> 123</a>
-                    </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nesciunt qui sit velit delectus voluptates, repellat ipsum culpa id deleniti. Rerum debitis facilis accusantium neque numquam mollitia modi quasi distinctio.</p>
-
-                    <p><b>Necessitatibus nihil impedit! Ex nisi eveniet, dolor aliquid consequuntur repudiandae.</b></p>
-                    <p>Magnam in repellat enim harum omnis aperiam! Explicabo illo, commodi, dolor blanditiis cupiditate harum nisi vero accusamus laudantium voluptatibus dolores quae obcaecati.</p>
-
-                    <a href="#" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                </div>
-            </div><!-- end of blog wrapper -->
-
-            <!-- blog-wrapper -->
-            <!--<div class="blog-card">
-                <div class="blog-card-header">
-                    <img src="assets/imgs/img-2.jpg" class="blog-card-img" alt="ysquaretech.com">
-                </div>
-                <div class="blog-card-body">
-                    <h5 class="blog-card-title">Explicabo illo</h6>
-
-                    <p class="blog-card-caption">
-                        <a href="#">By: Admin</a>
-                        <a href="#"><i class="ti-heart text-danger"></i> 456</a>
-                        <a href="#"><i class="ti-comment"></i> 264</a>
-                    </p>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit excepturi laborum enim, vitae ipsam atque eum, ad iusto consequuntur voluptas, esse doloribus. Perferendis porro quisquam vitae exercitationem aliquid, minus eos laborum repudiandae, cumque debitis iusto omnis praesentium? Laborum placeat sit adipisci illum tempore maxime, esse qui quae? Molestias excepturi corporis similique doloribus. Esse vitae earum architecto nulla non dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum facere, delectus eum commodi soluta distinctio sit repudiandae possimus sunt. Ipsum, rem.</p>
-
-                    <a href="#" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                </div>
-            </div><!-- end of blog wrapper -->
-
-        </div><!-- end of container -->
-    </section><!-- end of blog section --> 
-
-    <!-- contact section -->
-     <div class="cont" id="cont">
-
-<section class="section" id="contact">
-  <div class="container text-center">
-    <p class="section-subtitle">How can you communicate?</p>
-    <h6 class="section-title mb-5">Contact Me</h6>
-
-    <!-- contact form using FormSubmit -->
-    <form id="contact-form"
-          action="https://formsubmit.co/yashbhoi013@gmail.com" 
-          method="POST" 
-          class="contact-form col-md-10 col-lg-8 m-auto">
-
-      <!-- hidden settings -->
-      <input type="hidden" name="_subject" value="New message from portfolio website" />
-      <input type="hidden" name="_captcha" value="false" />
-
-      <div class="form-row">
-        <div class="form-group col-sm-6">
-          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
         </div>
-        <div class="form-group col-sm-6">
-          <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="body">
+              <img src="assets/imgs/responsive.svg" alt="App development icon" class="icon">
+              <h6 class="title">App development</h6>
+              <p class="subtitle">Mobile app design <br> for iOS and Android, cross-platform, custom development, maintenance, and optimization.</p>
+            </div>
+          </div>
         </div>
-        <div class="form-group col-sm-12">
-          <textarea name="message" rows="6" class="form-control" placeholder="Write Something" required></textarea>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="body">
+              <img src="assets/imgs/ads.svg" alt="Branding services icon" class="icon">
+              <h6 class="title">Branding services</h6>
+              <p class="subtitle">Logo design, brand strategy, visual identity, packaging design, marketing collateral,<br> and website design.</p>
+            </div>
+          </div>
         </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <div class="body">
+              <img src="assets/imgs/pencil-case.svg" alt="Graphic design icon" class="icon">
+              <h6 class="title">Graphic Designing</h6>
+              <p class="subtitle">Creative, custom <br>graphic design services for branding, websites, marketing materials.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- end of service section -->
 
-        <!-- honeypot for spam protection -->
-        <div style="display:none">
-          <input type="text" name="_honey">
+  <!-- portfolio section -->
+  <section class="section" id="portfolio">
+    <div class="container text-center">
+      <p class="section-subtitle">What I Did ?</p>
+      <h6 class="section-title mb-6">Portfolio</h6>
+      <div class="row">
+        <div class="col-md-4">
+          <a href="https://ysquaretech.com/" class="portfolio-card">
+            <img src="assets/imgs/folio-1.png" class="portfolio-card-img" alt="Web design project on ysquaretech.com">
+            <span class="portfolio-card-overlay">
+              <span class="portfolio-card-caption">
+                <h4>Web Designing</h4>
+                <p class="font-weight-normal">Category: Web development</p>
+              </span>
+            </span>
+          </a>
         </div>
+        <div class="col-md-4">
+          <a href="https://ysquaretech.com/" class="portfolio-card">
+            <!-- FIX: duplicate class attribute merged -->
+            <img src="assets/imgs/folio-2.jpg" class="portfolio-card-img img-responsive rounded" alt="App design project on ysquaretech.com">
+            <span class="portfolio-card-overlay">
+              <span class="portfolio-card-caption">
+                <h4>App Designing</h4>
+                <p class="font-weight-normal">Category: App development</p>
+              </span>
+            </span>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://ysquaretech.com/" class="portfolio-card">
+            <img src="assets/imgs/folio-3.jpg" class="portfolio-card-img img-responsive rounded" alt="Branding project on ysquaretech.com">
+            <span class="portfolio-card-overlay">
+              <span class="portfolio-card-caption">
+                <h4>Branding Services</h4>
+                <p class="font-weight-normal">Category: Branding &amp; Digital Marketing</p>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section><!-- end of portfolio section -->
 
-        <div class="form-group col-sm-12 mt-3">
-          <input type="submit" value="Send Message" class="btn btn-primary">
+  <!-- call to action -->
+  <section class="section-sm bg-primary">
+    <div class="container text-center text-sm-left">
+      <div class="row align-items-center">
+        <div class="col-sm offset-md-1 mb-4 mb-md-0">
+          <h6 class="title text-light">Want to work with me?</h6>
+          <p class="m-0 text-light">Always feel free to contact &amp; hire me</p>
         </div>
-      </div>  
-    </form>
-    <!-- end of contact form -->
+        <div class="col-sm offset-sm-2 offset-md-3">
+          <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href='mailto:yashbhoi013@gmail.com';">Hire Me</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial section -->
+  <section class="section" id="testmonial">
+    <div class="container text-center">
+      <p class="section-subtitle">What Do Clients Think About Me ?</p>
+      <h6 class="section-title mb-6">Testimonials</h6>
+      <p>Update soon</p>
+    </div>
+  </section><!-- end of testimonial section -->
+  <!-- The old commented-out Blog and Pricing sections were removed: their nested
+       HTML comments ended early and left stray </div></section> tags in the page. -->
+
+  <!-- contact section -->
+  <div class="cont" id="cont">
+    <section class="section" id="contact">
+      <div class="container text-center">
+        <p class="section-subtitle">How can you communicate?</p>
+        <h6 class="section-title mb-5">Contact Me</h6>
+
+        <form id="contact-form"
+              action="https://formsubmit.co/yashbhoi013@gmail.com"
+              method="POST"
+              class="contact-form col-md-10 col-lg-8 m-auto">
+
+          <input type="hidden" name="_subject" value="New message from portfolio website">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group col-sm-6">
+              <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+            </div>
+            <div class="form-group col-sm-12">
+              <textarea name="message" rows="6" class="form-control" placeholder="Write Something" required></textarea>
+            </div>
+
+            <!-- honeypot for spam protection -->
+            <div style="display:none">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-group col-sm-12 mt-3">
+              <input type="submit" value="Send Message" class="btn btn-primary">
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div><!-- end of contact section -->
+
+  <!-- success popup -->
+  <div id="success-popup">
+    <h5 id="popup-text">✅ Message Sent Successfully!</h5>
+    <button onclick="document.getElementById('success-popup').style.display='none'" class="btn btn-primary mt-3">OK</button>
   </div>
-</section>
-</div>
-<!-- end of contact section -->
-
-<!-- success popup -->
-<div id="success-popup" 
-     style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
-            background:#fff; padding:20px 30px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.3); 
-            text-align:center; z-index:1000;">
-  <h5>✅ Message Sent Successfully!</h5>
-  <button onclick="document.getElementById('success-popup').style.display='none'" 
-          class="btn btn-primary mt-3">OK</button>
-</div>
-
-<script>
-  // override default FormSubmit redirect
-  const form = document.getElementById('contact-form');
-  form.addEventListener('submit', async function(event) {
-    event.preventDefault(); // stop normal submission
-
-    const formData = new FormData(form);
-
-    // send via fetch
-    await fetch(form.action, {
-      method: 'POST',
-      body: formData,
-    });
-
-    // reset form
-    form.reset();
-
-    // show popup
-    document.getElementById('success-popup').style.display = 'block';
-  });
-</script>
-
 
   <!-- footer -->
-<div class="container">
-  <footer class="footer" 
-    style="
-      width: 100%; 
-      padding: 15px 10px; 
-      box-sizing: border-box;
-      display: flex; 
-      flex-wrap: wrap; 
-      justify-content: space-between; 
-      align-items: center; 
-      text-align: center;
-      
-    ">
+  <div class="container">
+    <footer class="footer" style="width:100%; padding:15px 10px; box-sizing:border-box; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; text-align:center;">
 
-    <!-- Copyright -->
-    <p id="copyText" style="
-      margin: 0; 
-      font-size: 14px; 
-      color: #7F7E7E; 
-      flex: 1 1 auto; 
-      text-align: left;
-      order: 1;
-    ">
-      Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-      <a href="mailto:yashbhoi013@gmail.com" style="color: #7F7E7E; text-decoration: none;">
-        Yash Bhoi
-      </a>
-		  <a href="/sitemap.html">Sitemap</a>
+      <p id="copyText" style="margin:0; font-size:14px; color:#7F7E7E; flex:1 1 auto; text-align:left; order:1;">
+        Copyright <span id="year"></span> &copy;
+        <a href="mailto:yashbhoi013@gmail.com" style="color:#7F7E7E; text-decoration:none;">Yash Bhoi</a>
+        <a href="/sitemap.html">Sitemap</a>
+      </p>
 
-    </p>
+      <div id="socialLinks" style="display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:15px; flex:1 1 auto; order:0;">
+        <a href="mailto:yash@pywrote.com" target="_blank" rel="noopener noreferrer" aria-label="Email" style="color:#7F7E7E; font-size:20px; text-decoration:none;"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/yash-bhoi-dev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color:#7F7E7E; font-size:20px; text-decoration:none;"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/0yashh___/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" style="color:#7F7E7E; font-size:20px; text-decoration:none;"><i class="fab fa-twitter"></i></a>
+        <a href="https://in.pinterest.com/yashbhoi013/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" style="color:#7F7E7E; font-size:20px; text-decoration:none;"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/0yashh___/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#7F7E7E; font-size:20px; text-decoration:none;"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/yashbhoi/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style="color:#7F7E7E; font-size:20px; text-decoration:none;"><i class="fab fa-github"></i></a>
+        <a href="https://www.kaggle.com/yash1324/" target="_blank" rel="noopener noreferrer" aria-label="Kaggle" style="color:#7F7E7E; font-size:20px; text-decoration:none;"><i class="fab fa-kaggle"></i></a>
+      </div>
+    </footer>
+  </div>
 
-    <!-- Social Links -->
-    <div id="socialLinks" style="
-      display: flex; 
-      flex-wrap: wrap; 
-      justify-content: flex-end; 
-      align-items: center; 
-      gap: 15px; 
-      flex: 1 1 auto;
-      order: 0;
-    ">
-      <a href="mailto:yash@pywrote.com" target="_blank" style="color: #7F7E7E; font-size: 20px; text-decoration: none;">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/yash-bhoi-dev/" target="_blank" style="color: #7F7E7E; font-size: 20px; text-decoration: none;">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://twitter.com/0yashh___/" target="_blank" style="color: #7F7E7E; font-size: 20px; text-decoration: none;">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://in.pinterest.com/yashbhoi013/" target="_blank" style="color: #7F7E7E; font-size: 20px; text-decoration: none;">
-        <i class="fab fa-pinterest"></i>
-      </a>
-      <a href="https://www.instagram.com/0yashh___/" target="_blank" style="color: #7F7E7E; font-size: 20px; text-decoration: none;">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://github.com/yashbhoi/" target="_blank" style="color: #7F7E7E; font-size: 20px; text-decoration: none;">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.kaggle.com/yash1324/" target="_blank" style="color: #7F7E7E; font-size: 20px; text-decoration: none;">
-        <i class="fab fa-kaggle"></i>
-      </a>
-    </div>
-
-  </footer>
-</div>
-
-<!-- Responsive inline script -->
-<script>
-function adjustFooterLayout() {
-  const isSmall = window.innerWidth < 768; // mobile width breakpoint
-  const footer = document.querySelector('.footer');
-  const copyText = document.getElementById('copyText');
-  const socialLinks = document.getElementById('socialLinks');
-
-  if (isSmall) {
-    // Stack vertically and put social icons first
-    footer.style.flexDirection = 'column';
-    footer.style.justifyContent = 'center';
-    copyText.style.textAlign = 'center';
-    socialLinks.style.justifyContent = 'center';
-    socialLinks.style.marginTop = '0';
-    copyText.style.marginTop = '10px';
-
-    // Change order
-    socialLinks.style.order = 0;
-    copyText.style.order = 1;
-  } else {
-    // Default row layout
-    footer.style.flexDirection = 'row';
-    footer.style.justifyContent = 'space-between';
-    copyText.style.textAlign = 'left';
-    socialLinks.style.justifyContent = 'flex-end';
-    copyText.style.marginTop = '0';
-    socialLinks.style.marginTop = '0';
-
-    // Reset order
-    socialLinks.style.order = 1;
-    copyText.style.order = 0;
-  }
-}
-
-window.addEventListener('resize', adjustFooterLayout);
-window.addEventListener('load', adjustFooterLayout);
-
-
- window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.querySelector(".loader").classList.add("hidden");
-    }, 100); // 100 milliseconds
-  });
-
-
-</script>
-
-
-</script>
-
-
-  <!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap 3 affix -->
+  <!-- core -->
+  <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+  <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
   <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+  <script src="assets/js/portjs.js"></script>
 
-    <!-- Meyawo js -->
-    <script src="assets/js/portjs.js"></script>
-
-    <body>
-  <!-- Your page content -->
-
-  <!-- Console Easter Egg -->
+  <!-- Page scripts -->
   <script>
-  const yashLogo = `
-██╗   ██╗ █████╗ ███████╗██╗  ██╗
-╚██╗ ██╔╝██╔══██╗██╔════╝██║  ██║
- ╚████╔╝ ███████║███████╗███████║
-  ╚██╔╝  ██╔══██║╚════██║██╔══██║
-   ██║   ██║  ██║███████║██║  ██║
-   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-   DEVLOPED BY: Y A S H   B H O I
-  `;
+    /* ---------- Domain notice ---------- */
+    function closeDomainNotice() {
+      document.getElementById("domainNotice").style.display = "none";
+    }
 
-  console.log("%c" + yashLogo, `
-    color: #00aaff;
-    font-weight: bold;
-    font-size: clamp(8px, 1.5vw, 14px);
-    line-height: 1.2;
-    font-family: monospace;
-  `);
+    /* ---------- Resume modal ---------- */
+    function openModal()  { document.getElementById("resumeModal").style.display = "block"; }
+    function closeModal() { document.getElementById("resumeModal").style.display = "none"; }
+    function downloadResume(size) {
+      var links = {
+        letter: "https://drive.google.com/file/d/15g1lyhxzMYZG5GocAAYg3gWKHh-NyfU-/view?usp=drive_link",
+        a4:     "https://drive.google.com/file/d/1Er0uU_fwmdqKbN-8CgEqy0SV9P5VD3Mq/view?usp=drive_link"
+      };
+      window.open(links[size], "_blank", "noopener");
+      closeModal();
+    }
+    // FIX: addEventListener instead of "window.onclick =" so it can't overwrite other handlers
+    window.addEventListener("click", function (event) {
+      if (event.target === document.getElementById("resumeModal")) closeModal();
+    });
+
+    /* ---------- Skills diagram ---------- */
+    (function () {
+      var circles   = document.querySelectorAll("#skillMap circle[id^='circle']");
+      var sweetSpot = document.getElementById("sweetSpot");
+      var infoBox   = document.getElementById("infoBox");
+      var infoText  = document.getElementById("infoText");
+      var wrapper   = document.getElementById("container");
+      var connector = document.getElementById("connector");
+      var VIEWBOX_W = 910, VIEWBOX_H = 950; // FIX: was hard-coded 900, but the viewBox is 910 wide
+
+      var infoData = {
+        circle1: "Designing & coding websites\nMaintaining websites\nTroubleshooting technology",
+        circle2: "Designing & coding websites\nMaintaining websites\nReviewing peoples’ work\nWriting novels/poems\nMaking hip-hop music",
+        circle3: "Designing & coding websites & Apps\nMaintaining websites\nConsulting with clients\nBrand designing",
+        sweetSpot: "This is my sweet spot!\nWhere my skills, passions, and earnings intersect."
+      };
+      var dots = {
+        circle1: document.getElementById("dot1"),
+        circle2: document.getElementById("dot2"),
+        circle3: document.getElementById("dot3"),
+        sweetSpot: document.getElementById("dotSweet")
+      };
+      var activeCircle = null;
+      var showTimer = null;
+
+      function updateLayout() {
+        wrapper.style.flexDirection = window.innerWidth < 750 ? "column" : "row";
+      }
+
+      function repositionConnector() {
+        if (!activeCircle) return;
+        var svgRect = document.getElementById("skillMap").getBoundingClientRect();
+        var boxRect = infoBox.getBoundingClientRect();
+        var x1 = +activeCircle.getAttribute("cx") || 450; // sweetSpot has no cx/cy
+        var y1 = +activeCircle.getAttribute("cy") || 450;
+        var x2, y2;
+
+        if (window.innerWidth < 750) {
+          y2 = ((boxRect.top - svgRect.top) / svgRect.height) * VIEWBOX_H - 5;
+          x2 = x1;
+        } else {
+          x2 = ((boxRect.left - svgRect.left) / svgRect.width) * VIEWBOX_W - 5;
+          y2 = y1;
+        }
+        connector.setAttribute("x1", x1 + 10);
+        connector.setAttribute("y1", y1);
+        connector.setAttribute("x2", x2);
+        connector.setAttribute("y2", y2);
+        connector.style.opacity = "1";
+      }
+
+      window.addEventListener("resize", function () { updateLayout(); repositionConnector(); });
+      updateLayout();
+
+      Array.prototype.concat.call([], Array.from(circles), [sweetSpot]).forEach(function (c) {
+        c.addEventListener("click", function () {
+          activeCircle = c;
+          clearTimeout(showTimer); // FIX: rapid clicks no longer stack timers
+
+          ["circle1", "circle2", "circle3", "sweetSpot"].forEach(function (id) {
+            var el = document.getElementById(id);
+            el.style.fill   = id === "sweetSpot" ? "#0000" : "#cbcaca4d";
+            el.style.stroke = id === "sweetSpot" ? "#0000" : "#cbcaca4d";
+          });
+          if (c.id !== "sweetSpot") {
+            c.style.fill = "#46b9e56b";
+            c.style.stroke = "#46b9e56b";
+          }
+
+          Object.keys(dots).forEach(function (k) { dots[k].style.opacity = "0"; });
+          infoBox.style.opacity = "0";
+          connector.style.opacity = "0";
+          infoText.textContent = "";
+
+          showTimer = setTimeout(function () {
+            var dot = dots[c.id];
+            dot.setAttribute("cx", +c.getAttribute("cx") || 450);
+            dot.setAttribute("cy", +c.getAttribute("cy") || 450);
+            dot.style.opacity = "1";
+
+            showTimer = setTimeout(function () {
+              infoBox.style.opacity = "1";
+              infoText.textContent = infoData[c.id];
+              infoBox.style.transform = window.innerWidth < 750 ? "translateY(10px)" : "translateX(0)";
+              repositionConnector();
+            }, 600);
+          }, 200);
+        });
+      });
+
+      // Auto-select circle 2 on load
+      window.addEventListener("load", function () {
+        document.getElementById("circle2").dispatchEvent(new Event("click"));
+      });
+    })();
+
+    /* ---------- Contact form ---------- */
+    (function () {
+      var form = document.getElementById("contact-form");
+      var popup = document.getElementById("success-popup");
+      var popupText = document.getElementById("popup-text");
+      var submitBtn = form.querySelector("input[type='submit']");
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.value = "Sending...";
+        try {
+          // FIX: use FormSubmit's AJAX endpoint and check the response, instead of
+          // always showing "success" even when the request failed.
+          var res = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: new FormData(form)
+          });
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          form.reset();
+          popupText.textContent = "✅ Message Sent Successfully!";
+        } catch (err) {
+          popupText.textContent = "❌ Could not send. Please email me directly.";
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.value = "Send Message";
+          popup.style.display = "block";
+        }
+      });
+    })();
+
+    /* ---------- Footer: year + responsive layout ---------- */
+    document.getElementById("year").textContent = new Date().getFullYear(); // FIX: replaces document.write
+
+    function adjustFooterLayout() {
+      var small = window.innerWidth < 768;
+      var footer = document.querySelector(".footer");
+      var copyText = document.getElementById("copyText");
+      var social = document.getElementById("socialLinks");
+
+      footer.style.flexDirection = small ? "column" : "row";
+      footer.style.justifyContent = small ? "center" : "space-between";
+      copyText.style.textAlign = small ? "center" : "left";
+      copyText.style.marginTop = small ? "10px" : "0";
+      social.style.justifyContent = small ? "center" : "flex-end";
+      social.style.order = small ? 0 : 1;
+      copyText.style.order = small ? 1 : 0;
+    }
+    window.addEventListener("resize", adjustFooterLayout);
+    window.addEventListener("load", adjustFooterLayout);
+
+    /* ---------- Loader ---------- */
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        document.querySelector(".loader").classList.add("hidden");
+      }, 100);
+    });
+
+    /* ---------- Console easter egg ---------- */
+    (function () {
+      var logo = [
+        "██╗   ██╗ █████╗ ███████╗██╗  ██╗",
+        "╚██╗ ██╔╝██╔══██╗██╔════╝██║  ██║",
+        " ╚████╔╝ ███████║███████╗███████║",
+        "  ╚██╔╝  ██╔══██║╚════██║██╔══██║",
+        "   ██║   ██║  ██║███████║██║  ██║",
+        "   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝",
+        "   DEVELOPED BY: Y A S H   B H O I"
+      ].join("\n");
+      console.log("%c" + logo,
+        "color:#00aaff;font-weight:bold;font-size:clamp(8px,1.5vw,14px);line-height:1.2;font-family:monospace;");
+    })();
   </script>
- 
 </body>
 </html>

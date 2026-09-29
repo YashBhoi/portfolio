@@ -81,6 +81,68 @@
 
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+```html
+<!-- Inactive Domain Notice -->
+<div id="domainNotice" class="domain-notice">
+    <span>yashbhoi.tech is currently inactive.</span>
+    <button class="domain-notice-close" onclick="closeDomainNotice()" aria-label="Close notification">&times;</button>
+</div>
+
+<style>
+.domain-notice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 50px 10px 20px;
+    background: #dc2626;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 99999;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.domain-notice-close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 2px 6px;
+    opacity: 0.9;
+}
+
+.domain-notice-close:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+@media (max-width: 576px) {
+    .domain-notice {
+        font-size: 13px;
+        padding-left: 15px;
+    }
+}
+</style>
+
+<script>
+function closeDomainNotice() {
+    document.getElementById("domainNotice").style.display = "none";
+}
+</script>
+```
 
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
